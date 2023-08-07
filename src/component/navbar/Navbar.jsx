@@ -37,20 +37,8 @@ function Navbar() {
       // Handle the case when no keywords are entered
     }
   };
-
   const toggleDrawer = (anchor, open) => (event) => {
-    if (
-      event.type === 'keydown' &&
-      (event.key === 'Tab' || event.key === 'Shift')
-    ) {
-      return;
-    }
-
-    // Check if the event target is part of the drawer content
-    if (
-      event.target &&
-      event.target.closest('.MuiDrawer-paper')
-    ) {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
     }
 
@@ -64,6 +52,7 @@ function Navbar() {
     <i class="fa-solid fa-xmark" ></i>
     </button>
     </div>
+
   );
 
   return (
