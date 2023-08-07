@@ -13,7 +13,11 @@ function Home() {
         setShowInfo(!showInfo); // Toggle the state value
     };
 
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
+    const handleAddToCart = () => {
+      setIsDrawerOpen(true);
+    };
     const dispatch = useDispatch();
     const { loading, error, products, productCount } = useSelector(
         (state) => state.productts
@@ -39,8 +43,10 @@ function Home() {
             <h2 className='homeheading'>Menu</h2>
             <div className="containeer" id='containeer'>
                 {products && products.map((item=>
-                    <Product product= {item} addToCartPressed={addToCartPressed} />
+                
+                    <Product product= {item} onAddToCart={handleAddToCart} />
                     ))}
+                    <Navbar isDrawerOpen={isDrawerOpen} />
             </div>
         </>
     )

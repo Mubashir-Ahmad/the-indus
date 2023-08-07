@@ -7,14 +7,14 @@ import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import {useSelector , useDispatch} from 'react-redux'
 import { addItem_tocart , removeitemfromcart } from '../../actions/CartAction';
-function Navbar(addToCartPressed ) {
+function Navbar({ isDrawerOpen } ) {
 
   const { isAuthenticated } = useSelector((state) => state.user);
   const { cartitems } = useSelector((state) => state.cart);
   console.log('NavBar',useSelector((state) => state.cart))
   const [isActive, setIsActive] = useState(false);
   const [state, setState] = useState({
-    right: false,
+    right: isDrawerOpen ,
   });
   const [keywords, setKeywords] = useState('');
 

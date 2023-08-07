@@ -4,12 +4,11 @@ import './product.css';
 import { useDispatch } from 'react-redux';
 import { addItem_tocart } from '../../actions/CartAction';
 
-function Product({ product }) {
+function Product({ product ,onAddToCart}) {
   // const alert = useAlert();
   const [quantities, setQuantities] = useState(product.products ? Array(product.products.length).fill(1) : []);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
-  const [addToCartPressed, setAddToCartPressed] = useState(false);
   const dispatch = useDispatch();
 
   const increaseQuantity = (index) => {
@@ -29,7 +28,7 @@ function Product({ product }) {
   const addToCart = (id, quantity) => {
     dispatch(addItem_tocart(id, quantity));
     // alert.success('Item Added to cart');
-    setAddToCartPressed(true); 
+    onAddToCart();
   };
 
   const openPopup = (product, index) => {
