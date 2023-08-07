@@ -7,7 +7,6 @@ import Metatitle from "../title/title";
 import SideBar from "./Sidebar";
 import {clearError,} from "../../actions/OrderAction";
 import {deletecategory, getcategory} from "../../actions/categoryAction"
-import { toast } from "react-toastify";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
