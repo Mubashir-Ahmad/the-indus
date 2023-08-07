@@ -44,19 +44,6 @@ const OrderList = ({ history }) => {
   }, [dispatch,isdeleted]);
 
 
-
-  data &&
-    data.forEach((item) => {
-      console.log(item)
-      rows.push({
-        
-        id: item._id,
-        name:item.Category_name,
-        active: item.active,
-        sorting: item.sorting,
-      });
-    });
-
   return (
     <Fragment>
       <Metatitle title={`ALL ORDERS - Admin`} />
