@@ -220,6 +220,11 @@
 .main-container{
   width: 100%;
 }
+.drawer{
+  display: flex;
+  justify-content: space-around;
+  background-color: beige;
+}
 @media screen and (max-width: 1537px) {
   .popupStyle  {
     overflow: scroll;

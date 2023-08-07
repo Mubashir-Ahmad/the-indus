@@ -58,33 +58,10 @@ function Navbar() {
   };
 
   const list = (anchor) => (
-    <Cartt/>
-    // <Box
-    //   sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
-    //   role="presentation"
-    //   onClick={toggleDrawer(anchor, false)}
-    //   onKeyDown={toggleDrawer(anchor, false)}
-    // >
-    //   <List>
-    //     {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-    //       <ListItem key={text} disablePadding>
-    //         <ListItemButton>
-    //           <ListItemText primary={text} />
-    //         </ListItemButton>
-    //       </ListItem>
-    //     ))}
-    //   </List>
-    //   <Divider />
-    //   <List>
-    //     {['All mail', 'Trash', 'Spam'].map((text, index) => (
-    //       <ListItem key={text} disablePadding>
-    //         <ListItemButton>
-    //           <ListItemText primary={text} />
-    //         </ListItemButton>
-    //       </ListItem>
-    //     ))}
-    //   </List>
-    // </Box>
+    <div className='drawer'>
+    <p>Cart{cartitems.length}</p>
+    <i class="fa-solid fa-xmark" onClick={toggleDrawer(anchor, false)}></i>
+    </div>
   );
 
   return (
