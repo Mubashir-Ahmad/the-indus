@@ -18,7 +18,7 @@ import ListItemText from '@mui/material/ListItemText';
 function Navbar() {
   const { isAuthenticated } = useSelector((state) => state.user);
   const { cartitems } = useSelector((state) => state.cart);
-  console.log('NavBar')
+  console.log('NavBar',useSelector((state) => state.cart))
   const [isActive, setIsActive] = useState(false);
   const [state, setState] = useState({
     right: false,
