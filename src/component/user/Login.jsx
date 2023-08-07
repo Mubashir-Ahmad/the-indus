@@ -29,25 +29,22 @@ function Login({ location}) {
   const redirect = id.state ? '/shipping' : '/';
 
   useEffect(() => {
-    
     if (error) {
-      // alert.error(error);
-      toast.error(error, {
-        position: "bottom-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-        });
-      // toast(error)
-      dispatch(clearError());
+      // toast.error(error, {
+      //   position: "bottom-center",
+      //   autoClose: 5000,
+      //   hideProgressBar: false,
+      //   closeOnClick: true,
+      //   pauseOnHover: true,
+      //   draggable: true,
+      //   progress: undefined,
+      //   theme: "light",
+      //   });
+      // dispatch(clearError());
     }
 
 
-  }, [dispatch, error,toast]);
+  }, [dispatch, error]);
 
   const switchtab = (e, tab) => {
     if (tab === 'login') {
