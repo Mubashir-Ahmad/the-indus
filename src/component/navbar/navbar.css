@@ -180,12 +180,12 @@
   border-radius: 100%;
 }
 .buttonn > button {
-    width: 100px;
-    height: 41px;
     position: relative;
     top: 10px;
-    border-radius: 40px;
     margin: 20px;
+    border-radius: 40px;
+    height: 40px;
+    width: 80px;
   }
 
   .buttonn > .buttoon {

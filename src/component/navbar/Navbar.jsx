@@ -58,32 +58,33 @@ function Navbar() {
   };
 
   const list = (anchor) => (
-    <Box
-      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-    >
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
+    <Cartt/>
+    // <Box
+    //   sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+    //   role="presentation"
+    //   onClick={toggleDrawer(anchor, false)}
+    //   onKeyDown={toggleDrawer(anchor, false)}
+    // >
+    //   <List>
+    //     {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+    //       <ListItem key={text} disablePadding>
+    //         <ListItemButton>
+    //           <ListItemText primary={text} />
+    //         </ListItemButton>
+    //       </ListItem>
+    //     ))}
+    //   </List>
+    //   <Divider />
+    //   <List>
+    //     {['All mail', 'Trash', 'Spam'].map((text, index) => (
+    //       <ListItem key={text} disablePadding>
+    //         <ListItemButton>
+    //           <ListItemText primary={text} />
+    //         </ListItemButton>
+    //       </ListItem>
+    //     ))}
+    //   </List>
+    // </Box>
   );
 
   return (
