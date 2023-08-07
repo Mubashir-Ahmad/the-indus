@@ -17,15 +17,8 @@ import ListItemText from '@mui/material/ListItemText';
 
 function Navbar() {
   const { isAuthenticated } = useSelector((state) => state.user);
-<<<<<<< HEAD
-=======
   const { cartitems } = useSelector((state) => state.cart);
-<<<<<<< HEAD
-  console.log('Navbar')
->>>>>>> 9275847 (177)
-=======
   console.log('NavBar')
->>>>>>> c8afd02 (177 commit)
   const [isActive, setIsActive] = useState(false);
   const [state, setState] = useState({
     right: false,
@@ -117,11 +110,7 @@ function Navbar() {
           <div className='buttonn'>
             <div className='buttoon'>
               <IconButton onClick={toggleDrawer('right', true)}>
-<<<<<<< HEAD
-                <i className='fa-solid fa-cart-shopping'></i>
-=======
                 <i className='fa-solid fa-cart-shopping' style={{ color: cartitems.length > 0 ? 'tomato' : 'unset' }}></i>
->>>>>>> 9275847 (177)
               </IconButton>
             </div>
             {isAuthenticated ? null : (
