@@ -32,7 +32,7 @@ const OrderList = ({ history }) => {
     }
 
     dispatch(getAllOrders());
-  }, [dispatch,  isdeleted]);
+  }, [dispatch,  navigate,isAuthenticated,isdeleted]);
 
 
   return (

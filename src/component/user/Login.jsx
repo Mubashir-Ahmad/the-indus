@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { clearError, load_user, login, register } from '../../actions/UserAction';
-// import { useAlert } from 'react-alert';
+import Metatitle from '../title/title';
 import './login.css';
 
 function Login({ location}) {
@@ -88,6 +88,7 @@ function Login({ location}) {
 
   return (
     <>
+       <Metatitle title={`Login user`} />
       <div className="Login-container">
         <div className="Login-box">
           <div>
