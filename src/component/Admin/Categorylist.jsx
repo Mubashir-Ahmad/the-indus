@@ -34,7 +34,7 @@ const NewProduct = ({ history }) => {
             navigate("/admindashbord");
             dispatch({type:'CREATE_CATEGORY_RESET'})
         }
-    }, [dispatch, error, history, navigate,isAuthenticated, isupdated]);
+    }, [dispatch, error, history,isupdated]);
 
     const createProductSubmitHandler = (e) => {
         e.preventDefault();
