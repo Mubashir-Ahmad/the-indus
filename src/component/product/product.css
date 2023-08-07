@@ -121,7 +121,7 @@
   }
 .MuiDialog{
   position: fixed;
-  height: 30vh;
+  height: 30vh !important;
   width: 88%!important;
   background-color: whitesmoke;
   top: 50%;
