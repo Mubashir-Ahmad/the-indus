@@ -44,7 +44,7 @@
   outline: none;
 }
 
-.createProductForm > div > svg {
+.createProductForm > div > i {
   position: absolute;
   transform: translateX(1vmax);
   font-size: 1.6vmax;
