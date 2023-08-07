@@ -60,7 +60,9 @@ function Navbar() {
   const list = (anchor) => (
     <div className='drawer'>
     <p>Cart{cartitems.length}</p>
-    <i class="fa-solid fa-xmark" onClick={toggleDrawer(anchor, false)}></i>
+    <button onClick={toggleDrawer(anchor, false)}>
+    <i class="fa-solid fa-xmark" ></i>
+    </button>
     </div>
   );
 

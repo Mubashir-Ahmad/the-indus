@@ -220,10 +220,12 @@
 .main-container{
   width: 100%;
 }
-.drawer{
+.drawer {
+  background-color: #f9f9f9;
   display: flex;
   justify-content: space-around;
-  background-color: beige;
+  width: 400px;
+  padding-top: 5%;
 }
 @media screen and (max-width: 1537px) {
   .popupStyle  {
