@@ -227,6 +227,18 @@
   width: 400px;
   padding-top: 5%;
 }
+.cart-box{
+  width: 100%;
+  /* display: flex; */
+  padding: 10px;
+}
+.cart-items{
+  display: flex;
+}
+.cart-items >img{
+  border-radius: 20px;
+  width: 20%;
+}
 @media screen and (max-width: 1537px) {
   .popupStyle  {
     overflow: scroll;

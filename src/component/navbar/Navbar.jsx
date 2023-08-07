@@ -73,6 +73,7 @@ function Navbar() {
     </div>
     {
       cartitems && cartitems.map((item) => (
+        <>
       <div className="cart-box" key={item.product}>
            <div className="cartitems">
             <img src={item.image} alt='saa/'/>
@@ -81,13 +82,14 @@ function Navbar() {
             <span>{`Price: PKR ${item.price}`}</span>
             <p onClick={()=>decresecartitem(item.product)}>Remove</p>
             </div>
-        </div>
-        <div className="cartinput">
+            <div className="cartinput">
               <button onClick={() => decresequality(item.product, item.quantity, item.stock)}> - </button>
               <input readOnly  value={item.quantity} />
               <button onClick={() => incresequality(item.product, item.quantity, item.stock)}> + </button>
             </div>
-            <p className='cartSubtotal'>
+        </div> 
+      </div>
+      <p className='cartSubtotal'>
               {`PKR${item.price * item.quantity}`}
             </p>
             <div className="cartGross">
@@ -103,7 +105,7 @@ function Navbar() {
             <button onClick={checkouthandler}>Check out</button>
           </div>
         </div>
-      </div>
+      </>
     ))
   }
 </>
