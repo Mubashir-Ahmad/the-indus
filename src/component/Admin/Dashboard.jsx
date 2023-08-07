@@ -41,7 +41,8 @@ const Dashboard = () => {
   useEffect(() => {
     if(!isAuthenticated)
     {
-      navigate('/login')
+      console.log("person")
+      // navigate('/login')
     }
       dispatch(load_user());
       dispatch(salesOrder());
