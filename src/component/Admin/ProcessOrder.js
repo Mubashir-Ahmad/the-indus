@@ -15,6 +15,7 @@ import "./processOrder.css";
 
 const ProcessOrder = ({ history, match }) => {
   const id = useParams();
+  const { isAuthenticated, user } = useSelector((state) => state.user);
   const { order, error, loading, shippingInfo } = useSelector(
     (state) => state.singleorder
   );
@@ -39,7 +40,10 @@ const ProcessOrder = ({ history, match }) => {
   const [status, setStatus] = useState("");
 
   useEffect(() => {
-  
+    if(!isAuthenticated)
+    {
+      navigate('/login')
+    }
     if (isUpdated) {
       navigate('/manger/order')
       dispatch({ type: 'UPDATE_ORDER_RESET' });

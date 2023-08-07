@@ -18,16 +18,19 @@ const OrderList = ({ history }) => {
   const deleteProductHandler = (id) => {
     dispatch(deletecategory(id));
   };
-
+  const { isAuthenticated, user } = useSelector((state) => state.user);
   useEffect(() => {
-    
+    if(!isAuthenticated)
+    {
+      navigate('/login')
+    }
     if (isdeleted) {
       navigate("/admin/category");
       dispatch({ type: 'DELETE_CATEGORY_RESET' });
     }
 
     dispatch(getcategory());
-  }, [dispatch,isdeleted]);
+  }, [dispatch, navigate,isAuthenticated,isdeleted]);
 
   const columns = [
     { field: "id", headerName: "Category ID", minWidth: 300, 

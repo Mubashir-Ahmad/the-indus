@@ -20,7 +20,7 @@ const UpdateUser = ({ history, match }) => {
   const dispatch = useDispatch();
   
   const navigate =useNavigate()
-  const { loading, error, user } = useSelector((state) => state.user);
+  const {isAuthenticated ,loading, error, user } = useSelector((state) => state.user);
 console.log('saasasas',useSelector((state) => state.profile))
   const {isUpdated, } = useSelector((state) => state.profile);
 
@@ -31,9 +31,11 @@ console.log('saasasas',useSelector((state) => state.profile))
   const userId = useParams();
   console.log(userId.id)
   useEffect(() => {
-   
+    if(!isAuthenticated)
+    {
+      navigate('/login')
+    }
     if (isUpdated) {
-      ;
       navigate("/admin/users");
       dispatch({ type: 'updated_profile_reset' });
     }

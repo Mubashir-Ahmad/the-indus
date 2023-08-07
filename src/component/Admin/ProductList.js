@@ -13,6 +13,7 @@ const ProductList = ({ history }) => {
   const dispatch = useDispatch();
  const navigate = useNavigate();
   const { error, products } = useSelector((state) => state.adminproduct);
+  const { isAuthenticated, user } = useSelector((state) => state.user);
 console.log(useSelector((state) => state.adminproduct))
   const {  isDeleted } = useSelector(
     (state) => state.updateproduct
@@ -27,6 +28,10 @@ console.log(useSelector((state) => state.adminproduct))
 
   useEffect(() => {
     console.log(isDeleted)
+    if(!isAuthenticated)
+    {
+      navigate('/login')
+    }
     if (isDeleted) {
       navigate("/admindashbord");
       dispatch({ type: 'DELETE_PRODUCT_RESET' });

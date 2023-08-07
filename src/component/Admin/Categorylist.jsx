@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 const NewProduct = ({ history }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    
+    const { isAuthenticated, user } = useSelector((state) => state.user);
 
     const { loading, error, isupdated} = useSelector((state) => state.categorycreate);
     console.log(useSelector((state) => state.categorycreate));
@@ -24,14 +24,17 @@ const NewProduct = ({ history }) => {
 
 
     useEffect(() => {
-        
+        if(!isAuthenticated)
+    {
+      navigate('/login')
+    }
 
         if (isupdated) {
             
             navigate("/admindashbord");
             dispatch({type:'CREATE_CATEGORY_RESET'})
         }
-    }, [dispatch, error, history, isupdated]);
+    }, [dispatch, error, history, navigate,isAuthenticated, isupdated]);
 
     const createProductSubmitHandler = (e) => {
         e.preventDefault();

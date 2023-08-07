@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 const NewProduct = ({ history }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { isAuthenticated, user } = useSelector((state) => state.user);
   const { loading, error, success } = useSelector((state) => state.newProduct);
   console.log(useSelector((state) => state.newProduct));
   const [name, setName] = useState("");
@@ -28,6 +29,10 @@ const NewProduct = ({ history }) => {
   const [avatarPreview, setAvatarPreview] = useState()
 
   useEffect(() => {
+    if(!isAuthenticated)
+    {
+      navigate('/login')
+    }
     if (error) {
       dispatch(clearError());
     }
@@ -36,7 +41,7 @@ const NewProduct = ({ history }) => {
       navigate("/admindashbord");
       dispatch({ type: 'NEW_PRODUCT_RESET' });
     }
-  }, [dispatch,  error, history, success]);
+  }, [dispatch,  error, history,  navigate,isAuthenticated,success]);
 
   const createProductSubmitHandler = (e) => {
     e.preventDefault();

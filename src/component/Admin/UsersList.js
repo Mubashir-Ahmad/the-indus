@@ -11,7 +11,7 @@ const UsersList = ({ history }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   
-
+  const { isAuthenticated, user } = useSelector((state) => state.user);
   const { error, users } = useSelector((state) => state.alluser);
 // console.log('hello',useSelector((state) => state.alluser))
   const {
@@ -25,24 +25,22 @@ const UsersList = ({ history }) => {
   };
 
   useEffect(() => {
+    if(!isAuthenticated)
+    {
+      navigate('/login')
+    }
     if (error) {
-  
       dispatch(clearError());
     }
-
     if (deleteError) {
-  
       dispatch(clearError());
     }
-
     if (isDeleted) {
-  
       navigate("/admin/users");
       dispatch({ type: 'delete_user_reset'});
     }
-
     dispatch(getAllUsers());
-  }, [dispatch, error, deleteError, history, isDeleted, message]);
+  }, [dispatch, error, deleteError, history,navigate ,isDeleted, message]);
 
   return (
     <Fragment>

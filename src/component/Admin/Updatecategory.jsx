@@ -24,10 +24,14 @@ const Updatecategory = () => {
         "Chicken",
         "Biryani"
     ];
-
+    const { isAuthenticated, user } = useSelector((state) => state.user);
     const productId = useParams();
     console.log(productId.id)
     useEffect(() => {
+        if(!isAuthenticated)
+    {
+      navigate('/login')
+    }
         if (isupdated) {
             
             navigate("/admindashbord");
@@ -35,7 +39,7 @@ const Updatecategory = () => {
                 type: 'UPDATE_CATEGORY_RESET'
             });
         }
-    }, [dispatch,error, isupdated, productId, product]);
+    }, [dispatch,error, isupdated, navigate,productId, product]);
 
     const updateProductSubmitHandler = (e) => {
         e.preventDefault();

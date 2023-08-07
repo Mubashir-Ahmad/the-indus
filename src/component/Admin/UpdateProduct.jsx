@@ -16,6 +16,7 @@ const UpdateProduct = ({ history, match }) => {
   const navigate = useNavigate()
   const { error, product } = useSelector((state) => state.productdetail);
   const { isUpdated, products } = useSelector((state) => state.updateproduct);
+  const { isAuthenticated, user } = useSelector((state) => state.user);
   console.log(useSelector((state) => state.updateproduct))
   const [name, setName] = useState("");
   const [price, setPrice] = useState(0);
@@ -36,14 +37,17 @@ const UpdateProduct = ({ history, match }) => {
   const productId =  useParams();
   console.log(productId.id)
   useEffect(() => {
+    if(!isAuthenticated)
+    {
+      navigate('/login')
+    }
     if (isUpdated) {
-      
       navigate("/admin/products");
       dispatch({
         type:'UPDATE_PRODUCT_RESET'
     });
     }
-  }, [dispatch,error,isUpdated,productId,product]);
+  }, [dispatch,error,navigate,isUpdated,productId,product]);
 
   const updateProductSubmitHandler = (e) => {
     e.preventDefault();

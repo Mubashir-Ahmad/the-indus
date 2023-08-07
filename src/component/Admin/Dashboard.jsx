@@ -53,7 +53,7 @@ const Dashboard = () => {
       dispatch(getadminAllOrders());
     
    
-  }, [dispatch]);
+  }, [dispatch, navigate,isAuthenticated,]);
 
   let totalAmount = 0;
   orders &&

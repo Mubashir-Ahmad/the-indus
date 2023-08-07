@@ -9,24 +9,23 @@ import {deleteOrder,getAllOrders,clearError,} from "../../actions/OrderAction";
 const OrderList = ({ history }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
-
-  const { error, orders ,user } = useSelector((state) => state.allOrders);
- 
-console.log('orrrr',orders)
-const userObject = orders && orders.length > 0 ? orders[0].User : null;
-
-const userName = userObject ? userObject.name : "No User Found"; // Default value when userObject is null
-
-console.log(userName);
+  const { isAuthenticated, user } = useSelector((state) => state.user);
+  const {  orders } = useSelector((state) => state.allOrders);
+  console.log('orrrr',orders)
+  const userObject = orders && orders.length > 0 ? orders[0].User : null;
+  const userName = userObject ? userObject.name : "No User Found"; // Default value when userObject is null
+  console.log(userName);
   const {  isdeleted } = useSelector((state) => state.deleteorder);
-    console.log(useSelector((state) => state.deleteorder))
+  console.log(useSelector((state) => state.deleteorder))
   const deleteOrderHandler = (id) => {
     dispatch(deleteOrder(id));
   };
 
   useEffect(() => {
-
+    if(!isAuthenticated)
+    {
+      navigate('/login')
+    }
     if (isdeleted) {
       navigate("/admin/orders");
       dispatch({ type: 'DELETE_ORDER_RESET' });
