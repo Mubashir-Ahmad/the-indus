@@ -122,13 +122,16 @@
 .MuiDialog{
   position: fixed;
   height: 30vh !important;
-  width: 88%!important;
-  background-color: whitesmoke;
+  width: 62%!important;
+  background-color: rgb(224, 224, 224);
   top: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow: 7px -2px 24px 4px rgba(0,0,0,0.69);
+-webkit-box-shadow: 7px -2px 24px 4px rgba(0,0,0,0.69);
+-moz-box-shadow: 7px -2px 24px 4px rgba(0,0,0,0.69);
   }
 .dialogContentRow .image {
   flex: 0 0 auto;
