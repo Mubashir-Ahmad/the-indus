@@ -54,7 +54,7 @@ function Navbar({ isDrawerOpen } ) {
     dispatch(removeitemfromcart(id));
   }
   const toggleDrawer = (anchor, open) => (event) => {
-    if ((event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) || !addToCartPressed) {
+    if ((event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift'))) {
       return;
     }
   
