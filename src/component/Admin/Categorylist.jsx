@@ -4,8 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { clearError, createProduct } from "../../actions/productAction";
 import { createcategory } from "../../actions/categoryAction";
 import Metatitle from "../title/title";
-// import AccountTreeIcon from "@material-ui/icons/AccountTree";
-// import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import SideBar from "./Sidebar";
 import { newProductReducer } from "../../reducer/productReducer";
 import { useNavigate } from "react-router-dom";
@@ -30,11 +30,20 @@ const NewProduct = ({ history }) => {
     }
 
         if (isupdated) {
-            
+            toast.success('🦄 Updated Succeessfully!', {
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                }); 
             navigate("/admindashbord");
             dispatch({type:'CREATE_CATEGORY_RESET'})
         }
-    }, [dispatch, error, history,isupdated]);
+    }, [dispatch, error, history,isupdated,toast]);
 
     const createProductSubmitHandler = (e) => {
         e.preventDefault();
@@ -68,7 +77,6 @@ const NewProduct = ({ history }) => {
                     >
                         <h1>Create Category</h1>
                         <div>
-                            {/* <AccountTreeIcon /> */}
                             <select
                                 value={category}
                                 onChange={(e) => setcategory(e.target.value)}
@@ -109,7 +117,20 @@ const NewProduct = ({ history }) => {
                     </form>
                 </div>
             </div>
+            <ToastContainer
+                  position="bottom-center"
+                  autoClose={5000}
+                  hideProgressBar={false}
+                  newestOnTop={false}
+                  closeOnClick
+                  rtl={false}
+                  pauseOnFocusLoss
+                  draggable
+                   pauseOnHover
+                  theme="light"
+          />
         </Fragment>
+        
     );
 };
 

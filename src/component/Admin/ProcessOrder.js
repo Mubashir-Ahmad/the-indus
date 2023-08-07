@@ -9,8 +9,8 @@ import {
 } from "../../actions/OrderAction";
 import { useSelector, useDispatch } from "react-redux";
 import Loading from "../loading/Loading";
-// import AccountTreeIcon from "@material-ui/icons/AccountTree";
-// import { UPDATE_ORDER_RESET } from "../../constants/orderConstants";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./processOrder.css";
 
 const ProcessOrder = ({ history, match }) => {
@@ -45,12 +45,22 @@ const ProcessOrder = ({ history, match }) => {
       navigate('/login')
     }
     if (isUpdated) {
-      navigate('/manger/order')
+      toast.success('🦄 Updated Succeessfully!', {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        }); 
+      navigate('/admindashbord')
       dispatch({ type: 'UPDATE_ORDER_RESET' });
     }
 
     dispatch(getsingleorder(id.id));
-  }, [dispatch,isUpdated]);
+  }, [dispatch,isUpdated,toast]);
 
   return (
     <Fragment>
@@ -185,6 +195,18 @@ const ProcessOrder = ({ history, match }) => {
           )}
         </div>
       </div>
+      <ToastContainer
+                        position="bottom-center"
+                        autoClose={5000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="light"
+                        />
     </Fragment>
   );
 };

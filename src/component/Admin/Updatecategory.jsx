@@ -11,6 +11,8 @@ import SideBar from "./Sidebar";
 import Metatitle from "../title/title";
 import { useNavigate } from "react-router-dom";
 import { updatetcategory } from "../../actions/categoryAction";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Updatecategory = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate()
@@ -33,13 +35,22 @@ const Updatecategory = () => {
       navigate('/login')
     }
         if (isupdated) {
-            
+            toast.success('🦄 Updated Succeessfully!', {
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                }); 
             navigate("/admindashbord");
             dispatch({
                 type: 'UPDATE_CATEGORY_RESET'
             });
         }
-    }, [dispatch,error, isupdated,productId, product]);
+    }, [dispatch,error, isupdated,productId, product,toast]);
 
     const updateProductSubmitHandler = (e) => {
         e.preventDefault();
@@ -107,6 +118,18 @@ const Updatecategory = () => {
                     </form>
                 </div>
             </div>
+            <ToastContainer
+                        position="bottom-center"
+                        autoClose={5000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="light"
+                        />
         </Fragment>
     );
 };

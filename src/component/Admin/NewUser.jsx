@@ -8,9 +8,8 @@ import { adminregister } from "../../actions/UserAction";
 import SideBar from "./Sidebar";
 import { newProductReducer } from "../../reducer/productReducer";
 import { useNavigate } from "react-router-dom";
-// import MailOutlineIcon from '@material-ui/icons/MailOutline'
-// import LockOpenIcon from '@material-ui/icons/LockOpen'
-// import FaceIcon from '@material-ui/icons/Face'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Newuser = ({ history }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -32,10 +31,21 @@ const Newuser = ({ history }) => {
       navigate('/login')
     }
     if (iscreated) {
+      toast.success('🦄User Created Successfully!', {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+        dispatch({ type:'admin_register_reset' });
       navigate("/admindashbord");
-      dispatch({ type:'admin_register_reset' });
+      
     }
-  }, [dispatch,iscreated]);
+  }, [dispatch,iscreated,toast]);
 
   const createProductSubmitHandler = (e) => {
     e.preventDefault();
@@ -105,6 +115,18 @@ const Newuser = ({ history }) => {
           </form>
         </div>
       </div>
+                <ToastContainer
+                        position="bottom-center"
+                        autoClose={5000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="light"
+                        />
     </Fragment>
   );
 };

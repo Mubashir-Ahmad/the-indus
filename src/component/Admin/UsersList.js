@@ -6,7 +6,8 @@ import Metatitle from "../title/title";
 import SideBar from "./Sidebar";
 import { getAllUsers, clearError, deleteUser } from "../../actions/UserAction";
 import { useNavigate } from "react-router-dom";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const UsersList = ({ history }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -36,11 +37,21 @@ const UsersList = ({ history }) => {
       dispatch(clearError());
     }
     if (isDeleted) {
+      toast.success('🦄 Updated Succeessfully!', {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        }); 
       navigate("/admin/users");
       dispatch({ type: 'delete_user_reset'});
     }
     dispatch(getAllUsers());
-  }, [dispatch, error, deleteError, history ,isDeleted, message]);
+  }, [dispatch, error, deleteError, history ,isDeleted, message,toast]);
 
   return (
     <Fragment>
@@ -84,16 +95,20 @@ const UsersList = ({ history }) => {
     </tbody>
   </table>
 )}
-          {/* <DataGrid
-            rows={rows}
-            columns={columns}
-            pageSize={10}
-            disableSelectionOnClick
-            className="productListTable"
-            autoHeight
-          /> */}
         </div>
       </div>
+      <ToastContainer
+                        position="bottom-center"
+                        autoClose={5000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="light"
+                        />
     </Fragment>
   );
 };

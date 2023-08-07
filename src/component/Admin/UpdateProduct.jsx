@@ -6,8 +6,8 @@ import {
   productdetail,
 } from "../../actions/productAction";
 import { useParams } from "react-router-dom";
-
-// import StorageIcon from "@material-ui/icons/Storage";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import SideBar from "./Sidebar";
 import Metatitle from "../title/title";
 import { useNavigate } from "react-router-dom";
@@ -42,12 +42,22 @@ const UpdateProduct = ({ history, match }) => {
       navigate('/login')
     }
     if (isUpdated) {
+      toast.success('🦄 Updated Succeessfully!', {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        }); 
       navigate("/admin/products");
       dispatch({
         type:'UPDATE_PRODUCT_RESET'
     });
     }
-  }, [dispatch,error,isUpdated,productId,product]);
+  }, [dispatch,error,isUpdated,productId,product,toast]);
 
   const updateProductSubmitHandler = (e) => {
     e.preventDefault();
@@ -191,6 +201,18 @@ const UpdateProduct = ({ history, match }) => {
           </form>
         </div>
       </div>
+      <ToastContainer
+                        position="bottom-center"
+                        autoClose={5000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="light"
+                        />
     </Fragment>
   );
 };

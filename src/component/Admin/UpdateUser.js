@@ -1,10 +1,8 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-
 import Metatitle from "../title/title";
-// import MailOutlineIcon from "@material-ui/icons/MailOutline";
-// import PersonIcon from "@material-ui/icons/Person";
-// import VerifiedUserIcon from "@material-ui/icons/VerifiedUser";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import SideBar from "./Sidebar";
 import { Navigate, useNavigate } from "react-router-dom";
 import {
@@ -36,10 +34,20 @@ console.log('saasasas',useSelector((state) => state.profile))
       navigate('/login')
     }
     if (isUpdated) {
+      toast.success('🦄 Updated Succeessfully!', {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        }); 
       navigate("/admin/users");
       dispatch({ type: 'updated_profile_reset' });
     }
-  }, [dispatch, error, history,isUpdated, user, userId]);
+  }, [dispatch, error, history,isUpdated, user, userId,toast]);
 
   const updateUserSubmitHandler = (e) => {
     e.preventDefault();
@@ -109,6 +117,18 @@ console.log('saasasas',useSelector((state) => state.profile))
           )}
         </div>
       </div>
+      <ToastContainer
+                        position="bottom-center"
+                        autoClose={5000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="light"
+                        />
     </Fragment>
   );
 };

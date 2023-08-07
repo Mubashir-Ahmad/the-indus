@@ -9,6 +9,8 @@ import { Link ,useNavigate} from "react-router-dom";
 import Metatitle from '../title/title'
 import SideBar from "./Sidebar";
 import {deleteProduct} from "../../actions/productAction"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const ProductList = ({ history }) => {
   const dispatch = useDispatch();
  const navigate = useNavigate();
@@ -33,11 +35,21 @@ console.log(useSelector((state) => state.adminproduct))
       navigate('/login')
     }
     if (isDeleted) {
+      toast.warn('🦄 Deleted Succeessfully!', {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
       navigate("/admindashbord");
       dispatch({ type: 'DELETE_PRODUCT_RESET' });
     }
     dispatch(getAdminProduct());
-  }, [dispatch, error, isDeleted]);
+  }, [dispatch, error, isDeleted,toast]);
 
   return (
     <Fragment>
@@ -82,6 +94,18 @@ console.log(useSelector((state) => state.adminproduct))
 )}
         </div>
       </div>
+      <ToastContainer
+                        position="bottom-center"
+                        autoClose={5000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="light"
+                        />
     </Fragment>
   );
 };

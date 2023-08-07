@@ -5,7 +5,8 @@ import { Link,useNavigate } from "react-router-dom";
 import Metatitle from "../title/title";
 import SideBar from "./Sidebar";
 import {deleteOrder,getAllOrders,clearError,} from "../../actions/OrderAction";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const OrderList = ({ history }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -27,12 +28,22 @@ const OrderList = ({ history }) => {
       navigate('/login')
     }
     if (isdeleted) {
+      toast.warn('🦄 Deleted Succeessfully!', {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
       navigate("/admin/orders");
       dispatch({ type: 'DELETE_ORDER_RESET' });
     }
 
     dispatch(getAllOrders());
-  }, [dispatch,isdeleted]);
+  }, [dispatch,isdeleted,toast]);
 
 
   return (
@@ -79,16 +90,20 @@ const OrderList = ({ history }) => {
     </tbody>
   </table>
 )}
-          {/* <DataGrid
-            rows={rows}
-            columns={columns}
-            pageSize={10}
-            disableSelectionOnClick
-            className="productListTable"
-            autoHeight
-          /> */}
         </div>
       </div>
+      <ToastContainer
+                        position="bottom-center"
+                        autoClose={5000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="light"
+                        />
     </Fragment>
   );
 };

@@ -3,14 +3,11 @@ import "./newProduct.css";
 import { useSelector, useDispatch } from "react-redux";
 import { clearError, createProduct } from "../../actions/productAction";
 import Metatitle from "../title/title";
-// import AccountTreeIcon from "@material-ui/icons/AccountTree";
-// import DescriptionIcon from "@material-ui/icons/Description";
-// import StorageIcon from "@material-ui/icons/Storage";
-// import SpellcheckIcon from "@material-ui/icons/Spellcheck";
-// import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import SideBar from "./Sidebar";
 import { newProductReducer } from "../../reducer/productReducer";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const NewProduct = ({ history }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -38,8 +35,18 @@ const NewProduct = ({ history }) => {
     }
 
     if (success) {
-      navigate("/admindashbord");
+      toast.success('🦄Product Created Successfully!', {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
       dispatch({ type: 'NEW_PRODUCT_RESET' });
+      navigate("/admindashbord");
     }
   }, [dispatch,  error, history,success]);
 
