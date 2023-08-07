@@ -6,6 +6,7 @@ import { getproducts, clearError } from '../../actions/Action';
 import { useSelector, useDispatch } from 'react-redux'
 import Product from '../product/Product';
 import {load_user} from '../../actions/UserAction'
+import Navbar from '../navbar/Navbar';
 function Home() {
     const [showInfo, setShowInfo] = useState(false);
     const { isAuthenticated, user } = useSelector((state) => state.user);
