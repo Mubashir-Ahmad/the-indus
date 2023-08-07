@@ -235,7 +235,7 @@
 .cart-items{
   display: flex;
 }
-.cart-items >img{
+.cart-items > img{
   border-radius: 20px;
   width: 20%;
 }

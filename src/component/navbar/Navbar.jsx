@@ -75,7 +75,7 @@ function Navbar() {
       cartitems && cartitems.map((item) => (
         <>
       <div className="cart-box" key={item.product}>
-           <div className="cartitems">
+           <div className="cart-items">
             <img src={item.image} alt='saa/'/>
             <div className="cartinput">
             <Link to={`/product/${item.product}`}>{item.name}</Link>
