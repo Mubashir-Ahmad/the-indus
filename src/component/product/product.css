@@ -1,0 +1,396 @@
+.productCard {
+  /* display: flex; */
+  text-decoration: none;
+   margin: 2vmax;  
+   /* LAPTOP KI SCREEN K LEYE KRNA HAII */ 
+  padding-bottom: 0.5vmax;
+  color: rgb(48, 48, 48);
+  transition: all 0.3s ease-in-out;
+}
+.description{
+  background-color: #ce1710;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  flex-wrap: wrap;
+  /* height: 56%; */
+}
+.add-quantity{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.boox-1 {
+  /* width: 47%; */
+  /* border: solid 1px lightgray; */
+  margin: 15px;
+}
+.description > strong{
+  font: 600 1.6vmax 'Dancing Script';
+  line-height: normal;
+ line-height: 1;
+ color: white;
+}
+.itemss{
+  display: flex;
+
+}
+.all-pro > h6{
+  font: 600 2vmax 'Dancing Script';
+      margin: 10px;
+}
+.productCard > .image > img {
+  width: 20vmax;
+}
+/* .image{
+  width: 100%;
+} */
+.productCard > .description > div {
+  margin: 0.7vmax 3.7vmax;
+  display: flex;
+  justify-content: flex-start;
+}
+
+ .description > div > span {
+  margin: 0.5vmax;
+  font: 300 2vmax "Dancing Script";
+  color: white;
+}
+
+.description > span {
+  font:300 1vmax 'Dancing Script';
+  color: white;
+  line-height: 2;
+}
+.description > p {
+  font-family: 'Montserrat';
+  font-size: 1vmax;
+  margin-bottom: 0;
+  color: white;
+  line-height: 2;
+}
+
+.productCard > span {
+  margin: 0.5vmax 0.5vmax;
+  color: tomato;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1vmax;
+}
+
+.productCard:hover {
+  /* box-shadow: 0 0 5px rgba(15, 15, 15, 0.26); */
+  transform: translateY(-1vmax);
+}
+.image > img{
+  width: 100%;
+  /* border-radius: 15px; */
+}
+.productCard:hover .text-cont {
+  opacity: 1;
+  top: 30%;
+  display: block;
+  height: 37px;
+}
+
+.text-cont {
+  height: 19%;
+  background-color: tomato;
+  color: white;
+  position: absolute;
+  opacity: 0;
+  z-index: 0;
+  top: 100%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  text-align: center;
+  transition: all 0.1s ease-out;
+  text-decoration: none;
+  border-radius: 15px;
+  display: none;
+}
+
+.dialogContentRow {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.MuiDialog-paperWidthSm {
+    max-width: 92% !important ;
+    max-height: 100% !important;
+  }
+.MuiDialog{
+    width: 92% !important ;
+    height: 100% !important;
+  }
+.dialogContentRow .image {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+.dialogContentRow .description {
+  flex: 1 1 auto;
+}
+.img{
+    width: 50%;
+}
+.img >img{
+    width: 70%;
+    height: 100%;
+}
+.descriptionn{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
+
+.descriptionn>.add-quantity >button {
+    border: none;
+    padding: 0.5vmax;
+    color: rgba(0, 0, 0, 0.74);
+    cursor: pointer;
+    color: white;
+    transition:all 0.5s ease-in-out;
+    width: 30%;
+}
+.instruction>.quick-viewww >button {
+  border: none;
+  padding: 0.4vmax;
+  color: black;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  height: 70%;
+  background-color: white;
+  width: 35px;
+  font-weight: bold;
+}
+.instruction > button {
+  display: inline-block;
+  font-size: 1.2rem;
+  line-height: 2;
+  background: #c93434;
+  color: white;
+  padding: 0 1rem;
+  margin: 7px 0px;
+  transition: all 0.4s ease-in-out;
+  border-radius: 13px;
+}
+.instruction >button:hover{
+  background-color: red;
+  color: white;
+  transform: scaleY(1.1);
+}
+.instruction>.quick-viewww > button:hover{
+    background-color: rgba(0, 0, 0, 0.74);
+
+}
+.descriptionn> button:hover{
+    background-color: rgba(0, 0, 0, 0.74);
+
+}
+.description > .add-quantity>.quantity-controls > button {
+  border: none;
+  /* padding: 0.4vmax; */
+  color: black;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  height: 70%;
+  background-color: white;
+  width: 35px;
+  font-weight: bold;
+}
+.description> .add-quantity> .quantity-controls>button:hover{
+    background-color: rgb(160, 157, 157);
+    color: white;
+}
+.description >.add-quantity > button {
+  display: inline-block;
+  font-size: 1.2rem;
+  line-height: 2;
+  background: #fff;
+  color: #ce1710;
+  padding: 0 1rem;
+  margin: 7px 0px;
+}
+.description>.add-quantity > button:hover{
+  background-color: whitesmoke;
+}
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.quantity-controls >input {
+    border: none;
+    padding: 0.5vmax;
+    width: 2vmax;
+    text-align: center;
+    outline: none;
+    color: rgba(0, 0, 0, 0.74);
+    font: 400 0.8vmax "Roboto";
+    -moz-appearance: textfield;
+    height: 70%;
+}
+.instruction .quick-viewww >input {
+    border: none;
+    padding: 0.5vmax;
+    width: 2vmax;
+    text-align: center;
+    outline: none;
+    color: rgba(0, 0, 0, 0.74);
+    font: 400 0.8vmax "Roboto";
+    -moz-appearance: textfield;
+    height: 70%;
+}
+.all-pro{
+  width: 100%;
+}
+.quantity-controls {
+  display: flex;
+  margin: 0px auto;
+  align-items: center;
+  border-radius: 28%;
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .productCard > p {
+    font-size: 1.7vmax;
+  }
+  .itemss {
+    display: flex;
+    flex-direction: column;
+  }
+  .productCard > div {
+    margin: 0vmax 3vmax;
+    display: block;
+  }
+  .productCard > span {
+    font-size: 1.5vmax;
+  }
+  .productCard > div > span {
+    margin: 0 0.5vmax;
+    font: 300 1vmax "Roboto";
+  }
+  .dialogContentRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 455px;
+  }
+  .descriptionn {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+  }
+  .image{
+    width: 89%;
+  }
+  .description {
+    background-color: #ce1710;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 9px;
+    flex-wrap: wrap;
+    width: 89%;
+  }
+}
+@media screen and (max-width:991px) {
+  .description {
+    background-color: #ce1710;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding-left: 15px; */
+    flex-wrap: wrap;
+  }
+
+  .description > strong {
+    font: 600 1.5vmax 'Dancing Script';
+      line-height: normal;
+    line-height: normal;
+    line-height: normal;
+    line-height: 2;
+    color: white;
+  }
+  .productCard > .description > p {
+    font-family: 'Montserrat';
+    font-size: 2vmax;
+    margin-bottom: 0;
+    color: white;
+    line-height: 2;
+  }
+  .productCard > .description > span {
+    font: 300 2.5vmax 'Dancing Script';
+    color: white;
+  }
+  .description > .add-quantity > .quantity-controls > button {
+    border: none;
+    color: black;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    height: 70%;
+    background-color: white;
+    font-weight: bold;
+    width: 27px;
+    padding: 0px;
+  }
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    border-radius: 28%;
+    overflow: hidden;
+  }
+}
+.description > .add-quantity > button {
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 2;
+  background: #fff;
+  color: #ce1710;
+  padding: 0 0rem;
+  margin: 0px 0px;
+}
+@media screen and (max-width:800px) {
+  .description {
+    background-color: #ce1710;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 9px;
+    flex-wrap: wrap;
+  }
+  .description > strong {
+    font: 600 1.5vmax 'Dancing Script';
+      line-height: normal;
+    line-height: normal;
+    line-height: 2;
+    color: white;
+  }
+  .productCard > .description > p {
+    font-family: 'Montserrat';
+    font-size: 2vmax;
+    margin-bottom: 0;
+    color: white;
+    line-height: 2;
+  }
+   .productCard > .description > span {
+    font: 300 2.5vmax 'Dancing Script';
+    color: white;
+  }
+}
+@media screen and (max-width:720px) {
+ .boox-1{
+  margin: 3px;
+}
+  .description > strong {
+    font: 600 1.3vmax 'Dancing Script' !important;
+}
+}
+@media screen and (max-width:480px) {
+  .boox-1 {
+    width: 100%;
+    margin: 15px;
+  }
+}

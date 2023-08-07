@@ -1,0 +1,407 @@
+
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+}
+.logo{
+    display: flex;
+    justify-content: space-around;
+}
+.location{
+    border-radius: 20px;
+    padding: 5px;
+    margin: 45px;
+    background-color: #e6e6e6;
+    max-height: 47px;
+}
+.pppp{
+  position: fixed;
+  background: rgba(0, 0, 0, 0.314);
+  width: 100%;
+  height: 100%;
+  top: -2px;
+  right: 0px;
+  display: block;
+  transition: all 0.6s ease-in-out 0s;
+  z-index: 999;
+}
+.location > i {
+    padding: 10px;
+}
+.logo > h2 >span {
+    font: 900 3vmax 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.logo > h2{
+    font: 500 3vmax "Roboto";
+}
+.searchbar{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    background: white;
+    justify-content: space-evenly;
+    border-radius: 16px;
+}
+.inputt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 88%;
+  padding-left: 38px;
+}
+.searchbar .inputt > input{
+    background-color: white;
+    border-radius: 12px;
+    outline: none;
+    width: 97%;
+    height: 39px;
+    text-align: center;
+    border: none;
+}
+.searchbar .inputt > input::placeholder{
+   text-align: left;
+   font: 300 1vmax "Roboto";
+}
+.searchbar .inputt > i {
+    /* position: relative;
+    right: 96%;
+    top: 11px; */
+    font-size: 1vmax;
+    color: rgba(0,0,0,0.690);
+    }
+.searchbar >button{
+    /* position: relative;
+    left: 244px;
+    bottom: 30%; */
+    /* border: none; */
+    
+}    
+.button > button{
+    border-radius: 40px;
+    margin: 10px;
+}
+.button >button > i{
+    margin: 6px;
+}
+
+.add-to-cart{
+    border-radius: 10px;
+    background-color: white;
+    padding-bottom: 24px;
+    position: absolute;
+    top: 66px;
+    right: 1%;
+    width: 22%;
+    border-bottom: solid 1px lightgray;
+}
+.add-to-cart > button:active{
+    border: none;
+}
+.add-to-cart > button> i{
+    font-size: 2vmax;
+    position: relative;
+    right: 131px;
+    top: 10px;
+}
+.add-to-cart > h2{
+    right: 78px;
+    position: relative;
+    top: 10px;
+    margin-bottom: 60px;
+    font: 900 2vmax Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* DropDwon */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+.drop{
+    display: flex;
+    justify-content: space-around;
+   
+}
+
+.add-extra >input {
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+    margin-top: 10px;
+    background-color: lightgray;
+}
+.add-extra > i{
+    position: absolute;
+    right: 31px;
+    top: 202px;
+}
+.banner{
+    height: 180px;
+    background-image: url("../../image/115.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.icon{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.icon-1{
+    margin: 10px;
+    border-radius: 50px;
+    background-color: white;
+}
+.icon-1  > i {
+    font: 300 2vmax;
+    margin: 10px;
+}
+.icon-2{
+    margin: 10px;
+    border-radius: 50px;
+    background-color: white;
+}
+.icon-2  > i {
+    margin: 10px;
+}
+.data{
+    display: flex;
+    justify-content: space-evenly;
+}
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.speedDial{
+  position: fixed;
+  top: 3vmax;
+  right: 3vmax;
+}
+.speedDialIcon{
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+}
+.buttonn > button {
+    width: 100px;
+    height: 41px;
+    position: relative;
+    top: 10px;
+    border-radius: 40px;
+    margin: 20px;
+  }
+
+  .buttonn > .buttoon {
+    width: 100px;
+    height: 41px;
+    /* position: relative;
+    top: 10px; */
+    border-radius: 40px;
+    background-color: #d5d5d5;
+  }
+  .buttonn {
+    display: flex;
+    align-items: center;
+    width: 16%;
+    justify-content: space-evenly;
+  }
+.linkk{
+    background-color: black;
+    width: 12%;
+    height: 39px;
+    padding: 7px;
+    border-radius: 0px 16px 16px 0px;
+}
+.linnk {
+    background: white;
+    width: 31%;
+    height: 32px;
+    border-radius: 11px;
+    color: black;
+    text-decoration: none;
+  }
+.main-container{
+  width: 100%;
+}
+@media screen and (max-width: 1537px) {
+  .popupStyle  {
+    overflow: scroll;
+    };
+    .searchbar {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        background: white;
+        justify-content: space-evenly;
+        border-radius: 16px;
+      }
+      .inputt {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 88%;
+        padding-left: 19px;
+      }
+      .linkk{
+        background-color: black;
+        width: 12%;
+        height: 39px;
+        padding: 7px;
+        border-radius: 0px 16px 16px 0px;
+    }
+    .linnk{
+        background: white;
+        width: 31%;
+        height: 32px;
+        border-radius: 11px;
+        color: black;
+        text-decoration: none;
+    }
+    .buttonn {
+        display: flex;
+        align-items: center;
+        width: 16%;
+        justify-content: space-evenly;
+      }
+      
+}
+@media screen and (max-width:1170px) {
+    .logo > img {
+        width: 85%;
+      }
+      .searchbar {
+        width: 35%;
+        display: flex;
+        align-items: center;
+        background: white;
+        justify-content: space-evenly;
+        border-radius: 16px;
+      }
+      .linnk {
+        background: white;
+        width: 31%;
+        height: 32px;
+        border-radius: 11px;
+        color: black;
+        text-decoration: none;
+      }
+      .buttonn {
+        display: flex;
+        align-items: center;
+        width: 20%;
+        justify-content: space-evenly;
+      }
+      .speedDial {
+        position: fixed;
+        top: 2vmax;
+        right: 2vmax;
+      }
+}
+@media screen and (max-width:950px) {
+  .pppp  {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.314);
+    width: 100% !important;
+    height: 100%;
+    top: -2px;
+    right: 0px;
+    transform: translateX(0%);
+    transition: all 0.6s ease-in-out 0s;
+    z-index: 999;
+    overflow: scroll;
+  }
+    .speedDial {
+        position: fixed;
+        top: 2vmax;
+        right: 1vmax;
+      }
+      .logo > img {
+        width: 80%;
+      }
+      .linnk{
+            background: white;
+            width: 39%;
+            height: 32px;
+            border-radius: 11px;
+            color: black;
+            text-decoration: none;
+            margin: 8px;
+          
+      }
+}
+@media screen and (max-width: 770px){
+    .linnk {
+        background: white;
+        width: 39%;
+        height: 32px;
+        border-radius: 11px;
+        color: black;
+        text-decoration: none;
+        margin: 8px;
+      }
+      .speedDial {
+        position: fixed;
+        top: 2vmax;
+        right: 0vmax;
+      }
+      .logo > img {
+        width: 75%;
+      }
+      .searchbar {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        background: white;
+        justify-content: space-evenly;
+        border-radius: 16px;
+      }
+}
+@media screen and (max-width:600px){
+  .navbar{
+    display: flex;
+}
+  .pppp  {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.314);
+    width: 100% !important;
+    height: 100%;
+    top: -2px;
+    right: 0px;
+    transform: translateX(0%);
+    transition: all 0.6s ease-in-out 0s;
+    z-index: 999;
+    overflow: scroll;
+  }  
+  .linnk {
+    background: white;
+    width: 85%;
+    height: 32px;
+    border-radius: 11px;
+    color: black;
+    text-decoration: none;
+    margin: 8px;
+  }
+  .logo{
+        width: 75%;
+    }
+    .logo > img {
+        width: 96px;
+      }
+      .buttonn {
+        display: flex;
+        align-items: flex-start;
+        width: 18%;
+        justify-content: space-evenly;
+        flex-direction: column;
+      }
+      .searchbar {
+        width: 52%;
+        display: flex;
+        align-items: center;
+        background: white;
+        justify-content: space-evenly;
+        border-radius: 16px;
+      }
+      .speedDial {
+        position: fixed;
+        top: 4vmax;
+        right: 0vmax;
+      }
+}

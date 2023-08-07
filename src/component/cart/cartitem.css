@@ -1,0 +1,62 @@
+.cartitem{
+    display: flex;
+    padding: 2vmax 6vmax;
+    height: 8vmax;
+    align-items: flex-start;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+.cartitem>img{
+    
+        width: 5.5vmax;
+        border-radius: 9px;
+        height: 5vmax
+}
+.cartitem > div {
+    display: flex;
+    margin: 0.3vmax 1vmax;
+    flex-direction: column;
+    width: 90px;
+}
+.cartitem >div >a{
+    font:300 0.9vmax cursive;
+    color: rgba(24, 24, 24, 0.815);
+    text-decoration: none;
+}
+.cartitem > div >span{
+    font:300 0.9vmax "Roboto";
+    color: rgba(24, 24, 24, 0.815);
+}
+.cartitem > div >p{
+    color: tomato;
+    font:100 0.8vmax "Roboto";
+    cursor: pointer;
+}
+@media(max-width:600px){
+    .cartitem > img {
+        width: 10vmax;
+        height: 13vmax;
+    }
+    .cartitem {
+        display: flex;
+        padding: 7vmax 1vmax;
+        height: 14vmax;
+        align-items: flex-start;
+        box-sizing: border-box;
+        width: 106%;
+      }
+      .cartitem >div >a{
+        font:300 2vmax cursive;
+        color: rgba(24, 24, 24, 0.815);
+        text-decoration: none;
+    }
+    .cartitem > div >span{
+        font:300 2vmax "Roboto";
+        color: rgba(24, 24, 24, 0.815);
+    }
+    .cartitem > div >p{
+        color: tomato;
+        font:100 2vmax "Roboto";
+        cursor: pointer;
+    }
+    }

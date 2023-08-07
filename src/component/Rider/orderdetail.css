@@ -1,0 +1,270 @@
+.cutom {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+  }
+.cutom > p{
+    font: 400 1.5vmax "Roboto";
+}
+h2{
+    margin: 20px;
+}
+.all-order{
+    display: flex;
+    justify-content: space-evenly;
+}
+.orderr{
+    /* border-bottom: solid 1px lightgray; */
+    padding: 15px;
+   height: 100%;
+}
+.orderrdetail{
+    width: 100%;
+}
+.orderr-page{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+}
+.orderr-page >div:last-child{
+    border-left: 1px solid rgba(0, 0, 0, 0.247);
+}
+/* .orderr-area{
+    padding: 5vmax;
+    padding-bottom: 0%;
+} */
+.orderr-area >p {
+    padding: 6vmax;
+    font: 400 1.8vmax "Roboto";
+}
+.orderr-box , .confirmm-container{
+    margin: 2vmax;
+}
+.orderr-box > div {
+    display: flex;
+    margin: 1vmax 0;
+}
+.orderr-box > div > p {
+    font: 400 1vmax "Roboto";
+    color: black;
+}
+.orderr-box > div > span {
+    margin: 0  1vmax;
+    font: 100 1vmax "Roboto";
+    color: #575757;
+}
+.confirmmitem{
+
+    min-height: 10vh;
+}
+.confirmmitem > p{
+    font: 400 1.8vmax "Roboto";
+}
+/* .confirmmitem{
+    padding: 5vmax;
+    padding-top: 2vmax;
+} */
+.confirmm-container{
+    height: 100%;
+    overflow-y: auto;
+    overflow: hidden;
+}
+.confirmm-container > div{
+    /* display: flex; */
+    font: 400 1vmax "Roboto";
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    margin: 2vmax 0;
+}
+.confirmm-container > div > img{
+    width: 7vmax;
+}
+.confirmm-container > div > a {
+    width: 60%;
+    margin: 0 2vmax;
+    color: #575757;
+    text-decoration: none;
+}
+.confirmm-container > div > span{
+    font: 100 1vmax "Roboto";
+    color: #5e5e5e;
+    width: 30%;
+}
+.orderr-summary{
+    padding: 7vmax;
+}
+.orderr-summary > p {
+    text-align: center;
+    font: 400 1.8vmax "Roboto";
+    border-bottom: 1px solid rgba(0, 0, 0, 0.247);
+    box-sizing: border-box;
+    padding: 1vmax;
+    margin: auto;
+    width: 100%;
+}
+.orderr-summary >div >div{
+    display: flex;
+    font: 300 1vmax "Roboto";
+    justify-content: space-between;
+    margin: 2vmax 0;
+}
+.orderr-summary >div >div > span{
+    color: rgba(0, 0, 0, 0.692);
+}
+.totall-price{
+    display: flex;
+    font: 300 1vmax "Roboto";
+    justify-content: space-between;
+    border-top: 1px solid rgba(0, 0, 0, 0.347);
+    padding: 2vmax 0;
+}
+.orderr-summary >div > button{
+    background-color: tomato;
+    color: white;
+    width: 100%;
+    padding: 0.5vmax;
+    border: none;
+    margin: auto;
+    cursor: pointer;
+    transition: all 0;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+.orderr-summary >div > button:hover{
+    transform: scale(1.1);
+    background-color: red;
+}
+@media (max-width:1500px) {
+    .orderr-summary{
+        padding: 5vmax;
+    }
+}
+@media (max-width:1300px) {
+    .orderr-summary{
+        padding: 2vmax;
+    }
+    .cutom > p {
+        font: 400 1.2vmax "Roboto";
+      }
+}
+@media (max-width:1024px) {
+    .orderr-summary{
+        padding: 2vmax;
+    }
+    .cutom > p {
+        font: 400 1vmax "Roboto";
+      }
+      .orderr-summary > p {
+        text-align: center;
+        font: 500 1.3vmax "Roboto";
+        border-bottom: 1px solid rgba(0, 0, 0, 0.247);
+        box-sizing: border-box;
+        padding: 1vmax;
+        margin: auto;
+        width: 100%;
+      }
+}
+@media (max-width:980px) {
+    .orderr-summary{
+        padding: 1vmax;
+    }
+    .cutom > p {
+        font: 400 1.2vmax "Roboto";
+      }
+      .orderr-summary > p {
+        text-align: center;
+        font: 489 1.2vmax "Roboto";
+        border-bottom: 1px solid rgba(0, 0, 0, 0.247);
+        box-sizing: border-box;
+        padding: 1vmax;
+        margin: auto;
+        width: 100%;
+      }
+}
+@media (max-width:800px){
+    .cutom > p {
+        font: 400 1vmax "Roboto" !important;
+      }                                   
+      .orderr-page {
+        height: 100%;
+        background-color: white;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: end;
+      }       
+      .all-order {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+      }
+      .orderr {
+        border-bottom: solid 1px lightgray;
+        padding: 15px;
+        height: 100%;
+        border: solid 1px lightgray;
+        margin: 4px;
+      }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+}
+@media(max-width:600px){
+    .orderr-page{
+        grid-template-columns: 1fr;
+        height: unset;
+    }
+    .orderr-page> div:last-child{
+        border-left: 0;
+        border-top:  1px solid rgba(0, 0, 0, 0.247);
+    }
+    .orderr-area > p{
+        font: 400 4vw "Roboto";
+    }
+    .orderr-box >div{
+        display: flex;
+        margin: 6vw 0;
+    }
+    .orderr-box >div >p{
+        font: 400 4vw "Roboto";
+    }
+    .orderr-box >div >span{
+        font: 100 4vw "Roboto";
+    }
+    .confirmmitem > p{
+        font: 400 6vw "Roboto";
+    }
+    
+    .confirmm-container > div {
+        font: 400 4vw "Roboto";
+        margin: 4vw 0;
+    }
+    .confirmm-container > div >img{
+        width: 10vw;
+    }
+    .confirmm-container>div >a {
+        margin: 0;
+        width: 30%;
+    }
+    .confirmm-container >div >span{
+        font: 100 4vw "Roboto";
+    } 
+    .orderr-summary>p{
+        font: 400 6vw "Roboto";
+        padding: 4vw;
+    }
+    .orderr-summary>div>div{
+        font: 300 4vw "Roboto";
+    }
+    .totall-price{
+        font: 300 4vw "Roboto";
+        padding: 5vw 0;
+    }
+    .orderr-summary > div > button {
+        padding: 15px;
+        margin: 4vw auto;
+        font: 400 4vw "Roboto";
+        width: 80%;
+    }
+    .cutom > p {
+        font: 400 0.9vmax "Roboto" !important;
+      }
+}

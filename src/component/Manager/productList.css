@@ -1,0 +1,120 @@
+.productListContainer {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  border-left: 1px solid rgba(0, 0, 0, 0.158);
+  display: flex;
+  flex-direction: column;
+  /* height: 100%; */
+}
+
+#productListHeading {
+  font: 400 2rem "Roboto";
+  padding: 0.5vmax;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.637);
+  transition: all 0.5s;
+  margin: 2rem;
+  text-align: center;
+}
+
+.productListTable {
+  background-color: white;
+  border: none !important;
+  width: 90%;
+  margin: 10px auto;
+}
+.tableheading{
+  background-color: #ce1710;
+}
+.productListTable div ,h5{
+  font: 300 1.2vmax "Roboto";
+  color: rgba(0, 0, 0, 0.678) !important;
+  border: none !important;
+}
+.tablecell{
+  font: 300 1.1vmax "Roboto";
+color: rgba(0, 0, 0, 0.627) !important;
+line-height: 2;
+
+}
+.productListTable a,
+.productListTable button {
+  color: rgba(0, 0, 0, 0.527);
+  transition: all 0.5s;
+}
+
+.productListTable a:hover {
+  color: tomato;
+}
+
+.productListTable button:hover {
+  color: rgb(236, 30, 30);
+}
+
+.MuiDataGrid-columnHeader div {
+  color: rgb(255, 255, 255);
+}
+.dashboardd {
+  width: 100vw;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+@media screen and (max-width:600px) {
+  .tablecell {
+    font: 300 16px "Roboto";
+      line-height: normal;
+    color: rgba(0, 0, 0, 0.627) !important;
+    line-height: 5 !important;
+  }
+}
+@media screen and (max-width: 750px) {
+  .productListTable div {
+    font: 300 4vw "Roboto";
+  }
+  .dashboardd{
+    grid-template-columns: 1fr;
+  }
+  .productListTable div, h5 {
+    font: 300 1vmax "Roboto";
+    color: rgba(0, 0, 0, 0.678) !important;
+    border: none !important;
+  }
+  .productListTable{
+    width: 100% !important ;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .productListTable div {
+    font: 300 4vw "Roboto";
+  }
+  .productListTable{
+    width: 100% !important ;
+  }
+}
+@media screen and (max-width: 960px) {
+  .productListTable div {
+    font: 300 4vw "Roboto";
+  }
+  .productListTable{
+    width: 100% !important ;
+  }
+  .tablecell {
+    font: 300 18px "Roboto";
+    color: rgba(0, 0, 0, 0.627) !important;
+    line-height: 2;
+  }
+}
+
+@media (max-width:550px) {
+  .tablecell {
+    font: 300 16px "Roboto";
+      line-height: normal;
+    color: rgba(0, 0, 0, 0.627) !important;
+    line-height: 5;
+  }
+  .productListTable{
+    width: 100% !important ;
+  }
+}

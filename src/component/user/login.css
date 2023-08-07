@@ -1,0 +1,190 @@
+.Login-container{
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(231, 231, 231); */
+    background-image: url(../../image/118.jpg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.Login-box{
+    background-color: white;
+    width: 25vw;
+    height: 70vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    left: 20%;
+}
+.login-toggle{
+    display: flex;
+    height: 3vmax;
+}
+.login-toggle>p{
+    color: rgba(0, 0, 0, 0.678);
+    font:300 1vmax "Roboto" ;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    width: 100%;
+}
+.login-toggle>p:hover{
+    color: tomato;
+}
+.Login-box > div >button {
+    background-color: tomato;
+    height: 3px;
+    width: 30%;
+    border: none;
+    transition: all 0.5s ease-in-out;
+
+}
+.signupform{
+    transform: translateY(-100%) translateX(100vmax);
+}
+#registerimage > img {
+    width: 3vmax;
+}
+#registerimage >input {
+    display: flex;
+    padding: 0%;
+}
+#registerimage > input::file-selector-button{
+    cursor: pointer;
+    width: 100%;
+    z-index: 2;
+    height: 7vh;
+    border: none;
+    margin: 0%;
+    font: 400 0.8vmax cursive;
+    transition: all 0.5s ease-in-out;
+    padding: 0 1vmax;
+    color: rgba(0, 0, 0, 0.678);
+    background-color: rgb(255, 255, 255);
+}
+#registerimage > input::file-selector-button:hover{
+    background-color: rgb(231, 231, 231);
+}
+.loginform,.signupform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 2vmax;
+    justify-content: space-evenly;
+    height: 70%;
+    transition: all 0.5s ease-in-out;
+
+}
+.loginform>div,.signupform> div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.loginform >div >input,
+.signupform >div>input{
+    padding: 1vmax 4vmax;
+    padding-right:1vmax ;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.267);
+    border-radius: 4px;
+    font: 300 0.9vmax cursive;
+    outline: none;
+    height: 50px;
+}
+.loginform >div > svg,
+.signupform >div>svg{
+    position: absolute;
+    transform: translateX(1vmax);
+}
+.loginform >a{
+    color: rgba(0, 0, 0, 0.678);
+    text-decoration: none;
+    align-self: flex-end;
+    transition: all 0.5s ease-in-out;
+    font: 500 0.8vmax "Gill Sans";
+}
+.loginform >a:hover{
+    color: black;
+}
+.loginbtn,.siginbtn{
+    border: none;
+    background-color: tomato;
+    color: white;
+    font: 300 0.9vmax "Roboto";
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+}
+.loginbtn:hover,.siginbtn:hover{
+    background-color: red;
+    transform: scale(1.1);
+}
+.shifttoLeft{
+    transform: translateX(-100%);
+}
+.shifttoNeutral{
+    transform: translateX(-86%);
+}
+.shifttoNeutralForm{
+    transform: translateX(0%) translateY(-94%);
+}
+.shifttoRight{
+transform: translateX(90%);
+}
+
+@media(max-width:600px){
+    .Login-container{
+        background-color: white;
+    }
+    .Login-box{
+        width: 100vw;
+        height: 95vh;
+    }
+    .login-toggle{
+        height: 5vmax;
+    }
+    .login-toggle >p{
+        font:300 1.5vmax "Roboto";
+    }
+    .loginform,.signupform{
+        padding: 5vmax;
+    }
+    .loginform >div >input , .signupform >div> input{
+        padding: 2.5vmax 5vmax;
+        font:300 1.7vmax cursive ;
+    }
+    .loginform >div >svg ,.signupform >div >svg{
+        font-size: 2.8vmax;
+    }
+    .loginform >a{
+        font: 500 1.8vmax "Gill Sans";
+    }
+    #registerimage >img {
+        width: 8vmax;
+        border-radius: 100%;
+    }
+    #registerimage >input::file-selector-button{
+        height: 7vh;
+        font: 400 1.8vmax cursive;
+    }
+    .loginbtn,.siginbtn{
+        font: 300 1.9vmax "Roboto";
+        padding: 1.8vmax;
+        transition: all 0.3s ease-in-out;
+    }
+    .loginbtn:hover,.siginbtn:hover{
+        color: red;
+    }
+}

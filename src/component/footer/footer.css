@@ -1,0 +1,132 @@
+/* .footer{
+    display: flex;
+    flex-direction: column;
+}
+.heading{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.footer > .description{
+    border: solid 10px red;
+    width: 10%;
+} */
+.img1{
+    width: 8%;
+    height: 0%;
+}
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(248, 248, 248);
+}
+.our-servicess{
+    display: flex;
+    justify-content: space-evenly;
+    width: 98%;
+}
+.setion{
+    background-color: #ce1710;
+    /* margin-top: 9px; */
+}
+.section-tittle{
+    color: white !important;
+    margin-right: 17%;
+    margin-bottom: 30px;
+}
+.section-paragarph{
+    width: 81%;
+}
+.sevice-content{ 
+    
+    padding: 20px 40px;
+    width: 100%;
+}
+iframe {
+    border: 0;
+    height: 198px;
+    width: 100%;
+  }
+h4{
+    margin: 0px;
+}
+.ulfooter {
+    line-height: 32px;
+    text-align: start;
+    margin-left: 20%;
+  }
+li {
+    color: white;
+    list-style: none;
+    margin-left: 22px;
+    line-height: 25px;
+  }
+.paragraph{
+    padding: 36px;
+} .navlink{
+    color: white;
+}
+/* @media(max-width:500px){
+    .img1{
+        display: none;
+    }
+} */
+@media screen and (max-width:1024px) {
+    .setion{
+        flex-direction: column;
+    }
+    .img1{
+        width: 19%;
+        height: 39%;
+    }
+    .our-servicess{
+        /* flex-direction: column; */
+        width: 100%;
+    }
+    .section-tittle {
+        margin-right: 20px;
+    }
+    .section-paragarph{
+        width: 100%;
+    }
+    .ulfooter {
+        padding: none;
+        line-height: 32px;
+        text-align: center;
+        margin-left: -33%;
+      }
+}
+@media screen and (max-width:800px) {
+    .sevice-content {
+        padding: 20px 18px;
+        width: 100%;
+      }
+      .section-tittle {
+        margin-right: 0px;
+      }
+      .ulfooter {
+        padding: none;
+        line-height: 32px;
+        text-align: center;
+        margin-left: -38%;
+      }
+}
+@media screen and (max-width:650px) {
+    .our-servicess{
+        flex-direction: column;
+        width: 100%;
+    }
+    .sevice-content {
+        padding: 20px 18px;
+        width: 100%;
+      }
+      .section-tittle {
+        margin-right: 0px;
+      }
+      .ulfooter {
+        padding: none;
+        line-height: 32px;
+        text-align: center;
+        margin-left: -11%;
+      }
+}

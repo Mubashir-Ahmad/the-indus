@@ -1,0 +1,274 @@
+.orderr-page {
+    height: 100%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+  }
+.order-page >div:last-child{
+    /* border-left: 1px solid rgba(0, 0, 0, 0.247); */
+}
+.order-area{
+    padding: 5vmax;
+    padding-bottom: 0%;
+}
+.order-area >p {
+    font: 400 1.8vmax "Roboto";
+}
+.order-box , .confirm-container{
+    margin: 2vmax;
+}
+.order-box > div {
+    display: flex;
+    margin: 1vmax 0;
+}
+.order-box > div > p {
+    font: 400 1vmax "Roboto";
+    color: black;
+}
+.order-box > div > span {
+    margin: 0  1vmax;
+    font: 100 1vmax "Roboto";
+    color: #575757;
+}
+.confirmitem > p{
+    font: 400 1.8vmax "Roboto";
+}
+.confirmitem{
+    padding: 5vmax;
+    padding-top: 2vmax;
+}
+.confirm-container{
+    min-height: 20vmax;
+    overflow-y: auto;
+}
+.confirm-container > div{
+    display: flex;
+    font: 400 1vmax "Roboto";
+    align-items: center;
+    justify-content: space-between;
+    margin: 2vmax 0;
+}
+.confirm-container > div > img{
+    width: 7vmax;
+}
+.confirm-container > div > a {
+    width: 60%;
+    margin: 0 2vmax;
+    color: #575757;
+    text-decoration: none;
+}
+.confirm-container > div > span{
+    font: 100 1vmax "Roboto";
+    color: #5e5e5e;
+    width: 30%;
+}
+.order-summary{
+    padding: 7vmax;
+}
+.order-summary > p {
+    text-align: center;
+    font: 400 1.8vmax "Roboto";
+    border-bottom: 1px solid rgba(0, 0, 0, 0.247);
+    box-sizing: border-box;
+    padding: 1vmax;
+    margin: auto;
+    width: 100%;
+}
+.order-summary >div >div{
+    display: flex;
+    font: 300 1vmax "Roboto";
+    justify-content: space-between;
+    margin: 2vmax 0;
+}
+.order-summary >div >div > span{
+    color: rgba(0, 0, 0, 0.692);
+}
+.total-price{
+    display: flex;
+    font: 300 1vmax "Roboto";
+    justify-content: space-between;
+    border-top: 1px solid rgba(0, 0, 0, 0.347);
+    padding: 2vmax 0;
+}
+.confirmm-container >h2 {
+    margin: 20px;
+}
+.order-summary >div > button{
+    background-color: tomato;
+    color: white;
+    width: 100%;
+    padding: 0.5vmax;
+    border: none;
+    margin: auto;
+    cursor: pointer;
+    transition: all 0;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+.order-summary >div > button:hover{
+    transform: scale(1.1);
+    background-color: red;
+}
+.od{
+    padding-bottom: 20px;
+    border-bottom: solid 1px lightgray;
+}
+.address{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.od-1 > h2{
+    padding-bottom: 20px;
+}
+.orders{
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.rider-earn {
+    display: flex;
+    justify-content: space-around;
+    margin: 43px;
+  }
+  .rider-earn > div {
+    border: solid 1px lightgray;
+    width: 40%;
+    height: 100%;
+    background: #faf8f8;
+    padding: 10px;
+    box-shadow: -1px 1px 18px -1px rgba(0,0,0,0.22);
+-webkit-box-shadow: -1px 1px 18px -1px rgba(0,0,0,0.22);
+-moz-box-shadow: -1px 1px 18px -1px rgba(0,0,0,0.22);
+  }
+  .rider-earn > div  > p{
+    font: 400 1.7vmax "Roboto";
+  }
+  .rider-earn > div  > i{
+
+    font-size: 1.5vmax;
+  }
+.graph{
+    /* display: flex;
+    justify-content: space-around; */
+
+}
+.graph-1 {
+    border: solid 1px lightgray;
+    height: 100%;
+    margin-top: 123px;
+    width: 83%;
+    margin-right: 14px;
+    box-shadow: -1px 1px 18px -1px rgba(0,0,0,0.22);
+    -webkit-box-shadow: -1px 1px 18px -1px rgba(0,0,0,0.22);
+    -moz-box-shadow: -1px 1px 18px -1px rgba(0,0,0,0.22);
+  }
+.graph-1 > p {
+    font: 400 2.3vmax "Roboto";
+}
+  .lineChart {
+    width: 100% !important;
+    display: flex;
+    margin: 0px !important;
+  }
+  .doughnutChart{
+    width: 100 !important;
+  }
+.dashboard > div >p{
+    font: 400 2.5vmax "Roboto";
+}
+.earnn{
+    width: 100%;
+}
+@media (max-width:1180px) {
+    .graph-01{
+        width: 100% !important;
+    }
+    .rider-earn > div > i {
+        font-size: 1vmax;
+      }   
+      .rider-earn > div > p {
+        font: 400 1.3vmax "Roboto";
+      }
+      .graph-1 > p {
+        font: 400 1.3vmax "Roboto";
+      }
+}
+@media (max-width:920px) {
+    .rider-earn > div > p {
+        font: 400 1vmax "Roboto";
+      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:600px){
+    .order-page{
+        grid-template-columns: 1fr;
+        height: unset;
+    }
+    .order-page> div:last-child{
+        border-left: 0;
+        border-top:  1px solid rgba(0, 0, 0, 0.247);
+    }
+    .order-area > p{
+        font: 400 4vw "Roboto";
+    }
+    .order-box >div{
+        display: flex;
+        margin: 6vw 0;
+    }
+    .order-box >div >p{
+        font: 400 4vw "Roboto";
+    }
+    .order-box >div >span{
+        font: 100 4vw "Roboto";
+    }
+    .confirmitem > p{
+        font: 400 6vw "Roboto";
+    }
+    .confirm-container{
+        max-height:50vw ;
+    }
+    .confirm-container > div {
+        font: 400 4vw "Roboto";
+        margin: 4vw 0;
+    }
+    .confirm-container > div >img{
+        width: 10vw;
+    }
+    .confirm-container>div >a {
+        margin: 0;
+        width: 30%;
+    }
+    .confirm-container >div >span{
+        font: 100 4vw "Roboto";
+    } 
+    .order-summary>p{
+        font: 400 6vw "Roboto";
+        padding: 4vw;
+    }
+    .order-summary>div>div{
+        font: 300 4vw "Roboto";
+    }
+    .total-price{
+        font: 300 4vw "Roboto";
+        padding: 5vw 0;
+    }
+    .order-summary >div >button{
+        padding: 4vw;
+        margin: 4vw auto;
+        font: 400 4vw "Roboto";
+    }
+}

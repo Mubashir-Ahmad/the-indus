@@ -1,0 +1,66 @@
+.cartitemm{
+    display: flex;
+    padding: 2vmax 0vmax;
+    height: 8vmax;
+    align-items: flex-start;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+.cartitemm>img{
+    width: 5.5vmax;
+    border-radius: 9px;
+    height: 5vmax
+}
+.cartitemm > div {
+    display: flex;
+    margin: 0.3vmax 1vmax;
+    flex-direction: column;
+    width: 90px;
+}
+.cartitemm >div >a{
+    font:300 0.9vmax cursive;
+    color: rgba(24, 24, 24, 0.815);
+    text-decoration: none;
+}
+.cartitemm > div >span{
+    font:300 0.9vmax "Roboto";
+    color: rgba(24, 24, 24, 0.815);
+}
+.cartitemm > div >p{
+    color: tomato;
+    font:100 0.8vmax "Roboto";
+    cursor: pointer;
+}
+@media(max-width:600px){
+    .cartitemm > img {
+        width: 88px;
+        height: 6vmax;
+      }
+      .cartitemm > div {
+        display: flex;
+        margin: 0.3vmax;
+        flex-direction: column;
+      }
+    .cartitemm {
+        display: flex;
+        padding: 2vmax 0vmax;
+        height: 14vmax;
+        align-items: flex-start;
+        box-sizing: border-box;
+        width: 100%;
+      }
+      .cartitemm >div >a{
+        font:300 0.9vmax cursive;
+        color: rgba(24, 24, 24, 0.815);
+        text-decoration: none;
+    }
+    .cartitemm > div >span{
+        font:300 0.9vmax "Roboto";
+        color: rgba(24, 24, 24, 0.815);
+    }
+    .cartitemm > div >p{
+        color: tomato;
+        font:100 0.9vmax "Roboto";
+        cursor: pointer;
+    }
+    }
