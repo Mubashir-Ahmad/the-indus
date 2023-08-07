@@ -77,13 +77,11 @@ function Navbar() {
       <div className="cart-box" key={item.product}>
            <div className="cartitems">
             <img src={item.image} alt='saa/'/>
-            <div>
+            <div className="cartinput">
             <Link to={`/product/${item.product}`}>{item.name}</Link>
             <span>{`Price: PKR ${item.price}`}</span>
             <p onClick={()=>decresecartitem(item.product)}>Remove</p>
-            </div>
-            <div className="cartinput">
-              <button onClick={() => decresequality(item.product, item.quantity, item.stock)}> - </button>
+            <button onClick={() => decresequality(item.product, item.quantity, item.stock)}> - </button>
               <input readOnly  value={item.quantity} />
               <button onClick={() => incresequality(item.product, item.quantity, item.stock)}> + </button>
             </div>

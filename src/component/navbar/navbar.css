@@ -229,7 +229,7 @@
 }
 .cart-box{
   width: 100%;
-  /* display: flex; */
+  display: flex;
   padding: 10px;
 }
 .cart-items{
