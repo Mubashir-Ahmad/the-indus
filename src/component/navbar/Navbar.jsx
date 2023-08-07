@@ -86,10 +86,7 @@ function Navbar() {
               <button onClick={() => incresequality(item.product, item.quantity, item.stock)}> + </button>
             </div>
         </div> 
-      </div>
-      <p className='cartsuBtotal'>
-              {`PKR${item.price * item.quantity}`}
-            </p>
+      </div> 
             <div className="cartGross">
           <div></div>
           <div className="cartgrossBox">
