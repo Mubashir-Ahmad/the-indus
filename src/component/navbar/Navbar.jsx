@@ -1,21 +1,14 @@
 import React, { useState } from 'react';
 import './navbar.css';
 import pic2 from '../../image/117.png';
-import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link ,useNavigate} from 'react-router-dom';
 import Cartt from '../cart/Cartt';
-import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-
+import {useSelector , useDispatch} from 'react-redux'
+import { addItem_tocart , removeitemfromcart } from '../../actions/CartAction';
 function Navbar() {
+
   const { isAuthenticated } = useSelector((state) => state.user);
   const { cartitems } = useSelector((state) => state.cart);
   console.log('NavBar',useSelector((state) => state.cart))
@@ -28,7 +21,26 @@ function Navbar() {
   const togglePopup = () => {
     setIsActive(!isActive);
   };
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  // console.log('id',cartitems)
+  const incresequality = (id, quantity, stock) => {
+    const newQty = quantity + 1;
+    console.log(stock,quantity)
+    if(stock <= quantity) {
+      return;
+    }
+    console.log('idd',id)
+    dispatch(addItem_tocart(id, newQty))
+  }
 
+  const decresequality = (id, quantity, stock) => {
+    const newQty = quantity - 1;
+    if(1 >= quantity) {
+      return;
+    }
+    dispatch(addItem_tocart(id, newQty))
+  }
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     if (keywords.trim()) {
@@ -37,6 +49,10 @@ function Navbar() {
       // Handle the case when no keywords are entered
     }
   };
+  const decresecartitem = (id) => {
+    console.log(id)
+    dispatch(removeitemfromcart(id));
+  }
   const toggleDrawer = (anchor, open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
@@ -44,15 +60,53 @@ function Navbar() {
 
     setState({ ...state, [anchor]: open });
   };
-
+  const checkouthandler =()=>{
+    navigate('/shipping')
+  }
   const list = (anchor) => (
+    <>
     <div className='drawer'>
     <p>Cart{cartitems.length}</p>
     <button onClick={toggleDrawer(anchor, false)}>
     <i class="fa-solid fa-xmark" ></i>
     </button>
     </div>
-
+    {
+      cartitems && cartitems.map((item) => (
+      <div className="cart-container" key={item.product}>
+           <div className="cartitemm">
+            <img src={item.image} alt='saa/'/>
+            <div>
+            <Link to={`/product/${item.product}`}>{item.name}</Link>
+            <span>{`Price: PKR ${item.price}`}</span>
+            <p onClick={()=>decresecartitem(item.product)}>Remove</p>
+            </div>
+        </div>
+        <div className="cartInput">
+              <button onClick={() => decresequality(item.product, item.quantity, item.stock)}> - </button>
+              <input readOnly  value={item.quantity} />
+              <button onClick={() => incresequality(item.product, item.quantity, item.stock)}> + </button>
+            </div>
+            <p className='cartsubtotal'>
+              {`PKR${item.price * item.quantity}`}
+            </p>
+            <div className="cartgross">
+          <div></div>
+          <div className="cartgrossbox">
+            <p>Gross Total</p>
+            <p>{`PKR${cartitems.reduce(
+              (acc,item)=> acc + item.quantity * item.price , 0
+            )}`}</p>
+          </div>
+          <div></div>
+          <div className="checkoutbtn">
+            <button onClick={checkouthandler}>Check out</button>
+          </div>
+        </div>
+      </div>
+    ))
+  }
+</>
   );
 
   return (
