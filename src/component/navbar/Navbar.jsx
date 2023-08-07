@@ -77,7 +77,7 @@ function Navbar() {
       <div className="cart-box" key={item.product}>
            <div className="cart-items">
             <img src={item.image} alt='saa/'/>
-            <div className="cartinput">
+            <div className="cartInput">
             <Link to={`/product/${item.product}`}>{item.name}</Link>
             <span>{`Price: PKR ${item.price}`}</span>
             <p onClick={()=>decresecartitem(item.product)}>Remove</p>

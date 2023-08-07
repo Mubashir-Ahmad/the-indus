@@ -239,6 +239,31 @@
   border-radius: 20px;
   width: 20%;
 }
+.cartInput{
+  display: flex;
+  align-items: center;
+  height: 8vmax;
+  padding: 0vmax 0vmax;
+}
+.cartInput > button{
+  border: none;
+  background-color: rgba(0, 0, 0, 0.616);
+  padding: 0.2vmax;
+  cursor: pointer;
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
+.cartInput > button:hover{
+  background-color: rgba(0, 0, 0, 0.767);
+}
+.cartInput > input {
+  border: none;
+  padding: 0.5vmax;
+  width: 32px;
+  text-align: center;
+  font: 300 1.3vmax "Roboto";
+  color: black;
+}
 @media screen and (max-width: 1537px) {
   .popupStyle  {
     overflow: scroll;
