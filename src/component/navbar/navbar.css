@@ -268,7 +268,7 @@
   color: black;
 }
 .MuiPaper-root{
-  width: 40% !important;
+  width: 25% !important;
 }
 .cartsuBtotal {
   display: flex;
@@ -279,38 +279,34 @@
   color: rgba(0, 0, 0, 0.753);
 }
 .cartGross{
-  display: grid;
-  grid-template-columns: 2fr 1.2fr;
+  /* display: grid;
+  grid-template-columns: 2fr 1.2fr; */
 }
 
 .cartgrossBox{
-  border-top:3px solid tomato ;
-  margin: 1vmax 0vmax;
+  /* border-top:3px solid tomato ; */
   box-sizing: border-box;
-  padding: 2vmax 0;
   font:300 1.7vmax "Roboto";
   display: flex;
   justify-content: space-evenly;
 }
-.checkoutbtn{
-  display: flex;
-  justify-content: flex-end;
-  width: 107%;
+.checkoutbTn{
+  width: 55%;
 }
-.checkoutbtn >button{
+.checkoutbTn>button {
   background-color: #ce1710;
-  color: white;
   border: none;
-  padding: 0.8vmax 4vmax;
-  width: 80%;
-  font: 300 1vmax "Roboto";
-  cursor: pointer;
-  margin: 1vmax 7vmax;
   border-radius: 13px;
-  transition: all 0.3s ease-in-out;
+  color: #fff;
+  cursor: pointer;
+  font: 300 1vmax "Roboto";
   height: 55%;
+  margin: 1vmax 7vmax;
+  padding: 0.8vmax 2vmax;
+  transition: all .3s ease-in-out;
+  width: 80%;
 }
-.checkoutbtn >button:hover{
+.checkoutbTn >button:hover{
   background-color: red;
   transform: scale(1.1);
 }

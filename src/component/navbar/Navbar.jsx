@@ -86,11 +86,11 @@ function Navbar() {
             </div>
         </div> 
       </div>
-      <p>Total Amount</p>
+    
             <div className="cartGross">
           <div></div>
           <div className="cartgrossBox">
-            <p>{`${cartitems.reduce(
+            <p>{`Total Amount: ${cartitems.reduce(
               (acc,item)=> acc + item.quantity * item.price , 0
             )}`}</p>
           </div>
