@@ -87,12 +87,12 @@ function Navbar() {
             </div>
         </div> 
       </div>
-      <p className='cartSubtotal'>
+      <p className='cartsuBtotal'>
               {`PKR${item.price * item.quantity}`}
             </p>
             <div className="cartGross">
           <div></div>
-          <div className="cartGrossbox">
+          <div className="cartgrossBox">
             <p>Gross Total</p>
             <p>{`PKR${cartitems.reduce(
               (acc,item)=> acc + item.quantity * item.price , 0

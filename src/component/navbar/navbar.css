@@ -270,6 +270,50 @@
 .MuiPaper-root{
   width: 40% !important;
 }
+.cartsuBtotal {
+  display: flex;
+  padding: 3vmax 2vmax;
+  box-sizing: border-box;
+  font: 300 1.4vmax cursive;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.753);
+}
+.cartGross{
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+}
+
+.cartgrossBox{
+  border-top:3px solid tomato ;
+  margin: 1vmax 0vmax;
+  box-sizing: border-box;
+  padding: 2vmax 0;
+  font:300 1.7vmax "Roboto";
+  display: flex;
+  justify-content: space-evenly;
+}
+.checkoutbtn{
+  display: flex;
+  justify-content: flex-end;
+  width: 107%;
+}
+.checkoutbtn >button{
+  background-color: #ce1710;
+  color: white;
+  border: none;
+  padding: 0.8vmax 4vmax;
+  width: 80%;
+  font: 300 1vmax "Roboto";
+  cursor: pointer;
+  margin: 1vmax 7vmax;
+  border-radius: 13px;
+  transition: all 0.3s ease-in-out;
+  height: 55%;
+}
+.checkoutbtn >button:hover{
+  background-color: red;
+  transform: scale(1.1);
+}
 @media screen and (max-width: 1537px) {
   .popupStyle  {
     overflow: scroll;
