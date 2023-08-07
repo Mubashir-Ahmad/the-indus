@@ -129,7 +129,8 @@ function Navbar() {
           <div className='buttonn'>
             <div className='buttoon'>
               <IconButton onClick={toggleDrawer('right', true)}>
-                <i className='fa-solid fa-cart-shopping' style={{ color: cartitems.length > 0 ? 'tomato' : 'unset' }}>{cartitems.length}</i>
+                <i className='fa-solid fa-cart-shopping' style={{ color: cartitems.length > 0 ? 'tomato' : 'unset' }}></i>
+                {cartitems.length}
               </IconButton>
             </div>
             {isAuthenticated ? null : (
