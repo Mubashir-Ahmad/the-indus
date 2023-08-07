@@ -7,7 +7,7 @@ import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import {useSelector , useDispatch} from 'react-redux'
 import { addItem_tocart , removeitemfromcart } from '../../actions/CartAction';
-function Navbar() {
+function Navbar(addToCartPressed ) {
 
   const { isAuthenticated } = useSelector((state) => state.user);
   const { cartitems } = useSelector((state) => state.cart);
@@ -54,10 +54,10 @@ function Navbar() {
     dispatch(removeitemfromcart(id));
   }
   const toggleDrawer = (anchor, open) => (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+    if ((event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) || !addToCartPressed) {
       return;
     }
-
+  
     setState({ ...state, [anchor]: open });
   };
   const checkouthandler =()=>{

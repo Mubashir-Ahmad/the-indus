@@ -39,7 +39,7 @@ function Home() {
             <h2 className='homeheading'>Menu</h2>
             <div className="containeer" id='containeer'>
                 {products && products.map((item=>
-                    <Product product= {item} />
+                    <Product product= {item} addToCartPressed={addToCartPressed} />
                     ))}
             </div>
         </>
