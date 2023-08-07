@@ -81,20 +81,20 @@ const Newuser = ({ history }) => {
             <h1>Create User</h1>
             {/* <form className='signupform' ref={registerTab} encType='mutipart/form-data' onSubmit={registersubmit}> */}
                 <div className="signupname">
-                    {/* <FaceIcon /> */}
+                    <i class="fa-solid fa-user"></i>  
                     <input type='text' name='name' value={name} placeholder='Name' required   onChange={(e) => setName(e.target.value)} />
                     {/* <input type='text' placeholder='Name' required onChange={registerdatechange} /> */}
                 </div>
                 <div className="signupemail">
-                {/* <MailOutlineIcon/> */}
+                <i class="fa-solid fa-envelope"></i>
                     <input type='email' placeholder='Email' required name='email' value={email}   onChange={(e) => setemail(e.target.value)} />
                 </div>
                 <div className="signupassword">
-                    {/* <LockOpenIcon/> */}
+                <i class="fa-sharp fa-solid fa-key"></i>
                     <input type='password' name='password' value={password} placeholder='Password' required   onChange={(e) => setpassword(e.target.value)} />
                 </div>
                 <div>
-              {/* <AccountTreeIcon /> */}
+                <i class="fa-solid fa-pen-ruler"></i>
               <select
                 value={role}
                 onChange={(e) => setrole(e.target.value)}

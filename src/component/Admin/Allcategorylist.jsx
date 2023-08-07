@@ -41,7 +41,7 @@ const OrderList = ({ history }) => {
     }
 
     dispatch(getcategory());
-  }, [dispatch,isdeleted, toast]);
+  }, [dispatch,isdeleted]);
 
 
 
