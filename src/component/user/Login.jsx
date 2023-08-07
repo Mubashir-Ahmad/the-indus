@@ -47,7 +47,7 @@ function Login({ location}) {
     }
 
 
-  }, [dispatch, error]);
+  }, [dispatch, error,toast]);
 
   const switchtab = (e, tab) => {
     if (tab === 'login') {
