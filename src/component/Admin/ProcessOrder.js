@@ -50,7 +50,7 @@ const ProcessOrder = ({ history, match }) => {
     }
 
     dispatch(getsingleorder(id.id));
-  }, [dispatch,isUpdated,navigate]);
+  }, [dispatch,isUpdated]);
 
   return (
     <Fragment>

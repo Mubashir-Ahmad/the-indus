@@ -47,7 +47,7 @@ const UpdateProduct = ({ history, match }) => {
         type:'UPDATE_PRODUCT_RESET'
     });
     }
-  }, [dispatch,error,navigate,isUpdated,productId,product]);
+  }, [dispatch,error,isUpdated,productId,product]);
 
   const updateProductSubmitHandler = (e) => {
     e.preventDefault();

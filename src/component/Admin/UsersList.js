@@ -40,7 +40,7 @@ const UsersList = ({ history }) => {
       dispatch({ type: 'delete_user_reset'});
     }
     dispatch(getAllUsers());
-  }, [dispatch, error, deleteError, history,navigate ,isDeleted, message]);
+  }, [dispatch, error, deleteError, history ,isDeleted, message]);
 
   return (
     <Fragment>

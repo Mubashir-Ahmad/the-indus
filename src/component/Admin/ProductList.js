@@ -37,7 +37,7 @@ console.log(useSelector((state) => state.adminproduct))
       dispatch({ type: 'DELETE_PRODUCT_RESET' });
     }
     dispatch(getAdminProduct());
-  }, [dispatch, error, isDeleted,navigate]);
+  }, [dispatch, error, isDeleted]);
 
   return (
     <Fragment>

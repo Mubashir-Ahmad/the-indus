@@ -35,7 +35,7 @@ const Newuser = ({ history }) => {
       navigate("/admindashbord");
       dispatch({ type:'admin_register_reset' });
     }
-  }, [dispatch,  navigate,isAuthenticated,iscreated]);
+  }, [dispatch,iscreated]);
 
   const createProductSubmitHandler = (e) => {
     e.preventDefault();

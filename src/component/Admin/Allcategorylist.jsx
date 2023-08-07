@@ -30,7 +30,7 @@ const OrderList = ({ history }) => {
     }
 
     dispatch(getcategory());
-  }, [dispatch, navigate,isAuthenticated,isdeleted]);
+  }, [dispatch,isdeleted]);
 
   const columns = [
     { field: "id", headerName: "Category ID", minWidth: 300, 

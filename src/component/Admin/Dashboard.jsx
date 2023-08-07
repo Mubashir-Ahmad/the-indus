@@ -41,8 +41,7 @@ const Dashboard = () => {
   useEffect(() => {
     if(!isAuthenticated)
     {
-      console.log("person")
-      // navigate('/login')
+      navigate('/login')
     }
       dispatch(load_user());
       dispatch(salesOrder());
@@ -54,7 +53,7 @@ const Dashboard = () => {
       dispatch(getadminAllOrders());
     
    
-  }, [dispatch,]);
+  }, [dispatch]);
 
   let totalAmount = 0;
   orders &&

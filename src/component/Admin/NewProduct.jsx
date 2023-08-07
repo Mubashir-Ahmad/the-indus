@@ -41,7 +41,7 @@ const NewProduct = ({ history }) => {
       navigate("/admindashbord");
       dispatch({ type: 'NEW_PRODUCT_RESET' });
     }
-  }, [dispatch,  error, history,  navigate,isAuthenticated,success]);
+  }, [dispatch,  error, history,success]);
 
   const createProductSubmitHandler = (e) => {
     e.preventDefault();

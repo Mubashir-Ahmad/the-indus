@@ -39,7 +39,7 @@ const Updatecategory = () => {
                 type: 'UPDATE_CATEGORY_RESET'
             });
         }
-    }, [dispatch,error, isupdated, navigate,productId, product]);
+    }, [dispatch,error, isupdated,productId, product]);
 
     const updateProductSubmitHandler = (e) => {
         e.preventDefault();

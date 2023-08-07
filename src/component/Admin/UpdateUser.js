@@ -39,7 +39,7 @@ console.log('saasasas',useSelector((state) => state.profile))
       navigate("/admin/users");
       dispatch({ type: 'updated_profile_reset' });
     }
-  }, [dispatch, error, history, navigate,isUpdated, user, userId]);
+  }, [dispatch, error, history,isUpdated, user, userId]);
 
   const updateUserSubmitHandler = (e) => {
     e.preventDefault();
