@@ -73,8 +73,8 @@ function Navbar() {
     </div>
     {
       cartitems && cartitems.map((item) => (
-      <div className="cart-container" key={item.product}>
-           <div className="cartitemm">
+      <div className="cart-box" key={item.product}>
+           <div className="cartitems">
             <img src={item.image} alt='saa/'/>
             <div>
             <Link to={`/product/${item.product}`}>{item.name}</Link>
@@ -82,17 +82,17 @@ function Navbar() {
             <p onClick={()=>decresecartitem(item.product)}>Remove</p>
             </div>
         </div>
-        <div className="cartInput">
+        <div className="cartinput">
               <button onClick={() => decresequality(item.product, item.quantity, item.stock)}> - </button>
               <input readOnly  value={item.quantity} />
               <button onClick={() => incresequality(item.product, item.quantity, item.stock)}> + </button>
             </div>
-            <p className='cartsubtotal'>
+            <p className='cartSubtotal'>
               {`PKR${item.price * item.quantity}`}
             </p>
-            <div className="cartgross">
+            <div className="cartGross">
           <div></div>
-          <div className="cartgrossbox">
+          <div className="cartGrossbox">
             <p>Gross Total</p>
             <p>{`PKR${cartitems.reduce(
               (acc,item)=> acc + item.quantity * item.price , 0
