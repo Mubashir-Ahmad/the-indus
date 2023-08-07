@@ -5,7 +5,7 @@ import { clearError, load_user, login, register } from '../../actions/UserAction
 import Metatitle from '../title/title';
 import './login.css';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+  import 'react-toastify/dist/ReactToastify.css';
 function Login({ location}) {
   const navigate = useNavigate();
   // const alert = useAlert();
@@ -29,18 +29,10 @@ function Login({ location}) {
   const redirect = id.state ? '/shipping' : '/';
 
   useEffect(() => {
+    
     if (error) {
-      // toast.error(error, {
-      //   position: "bottom-center",
-      //   autoClose: 5000,
-      //   hideProgressBar: false,
-      //   closeOnClick: true,
-      //   pauseOnHover: true,
-      //   draggable: true,
-      //   progress: undefined,
-      //   theme: "light",
-      //   });
-      // dispatch(clearError());
+      // alert.error(error);
+      dispatch(clearError());
     }
 
 
@@ -173,18 +165,6 @@ function Login({ location}) {
                     </form>
         </div>
       </div>
-                <ToastContainer
-                  position="bottom-center"
-                  autoClose={5000}
-                  hideProgressBar={false}
-                  newestOnTop={false}
-                  closeOnClick
-                  rtl={false}
-                  pauseOnFocusLoss
-                  draggable
-                   pauseOnHover
-                  theme="light"
-          />
     </>
   );
 }
