@@ -95,7 +95,7 @@ function Navbar() {
             )}`}</p>
           </div>
           <div></div>
-          <div className="checkoutbtn">
+          <div className="checkoutbTn">
             <button onClick={checkouthandler}>Check out</button>
           </div>
         </div>
