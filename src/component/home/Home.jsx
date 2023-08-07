@@ -44,10 +44,12 @@ function Home() {
             <h2 className='homeheading'>Menu</h2>
             <div className="containeer" id='containeer'>
                 {products && products.map((item=>
-                
+                <>
+                <Navbar isDrawerOpen={isDrawerOpen} />
                     <Product product= {item} onAddToCart={handleAddToCart} />
+                    </>
                     ))}
-                    <Navbar isDrawerOpen={isDrawerOpen} />
+                    
             </div>
         </>
     )
