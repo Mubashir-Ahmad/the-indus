@@ -81,7 +81,7 @@ function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
                 <img src={item.image} alt='saa/' />
                 <div className="carTInput">
                   <Link to={`/product/${item.product}`}>{item.name}</Link>
-                  <div>
+                  <div className='drawerinput'>
                   <button onClick={() => decresequality(item.product, item.quantity, item.stock)}> - </button>
                   <input readOnly value={item.quantity} />
                   <button onClick={() => incresequality(item.product, item.quantity, item.stock)}> + </button>
@@ -98,7 +98,7 @@ function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
                 (acc, item) => acc + item.quantity * item.price, 0
               )} PKR`}</p>
             </div>
-            <div></div>
+              <div></div>
             <div className="checkoutbTn">
               <button onClick={checkouthandler}>Check out</button>
             </div>
