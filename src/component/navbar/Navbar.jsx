@@ -85,12 +85,11 @@ function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
                   <button onClick={() => decresequality(item.product, item.quantity, item.stock)}> - </button>
                   <input readOnly value={item.quantity} />
                   <button onClick={() => incresequality(item.product, item.quantity, item.stock)}> + </button>
-                  </div>
-                </div>
-                <Link onClick={() => decresecartitem(item.product)}>
+                  <Link onClick={() => decresecartitem(item.product)}>
                 <i class="fa-solid fa-trash"></i>
                 </Link>
-
+                  </div>
+                </div>
               </div>
             </div>
           ))}

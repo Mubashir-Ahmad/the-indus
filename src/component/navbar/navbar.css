@@ -237,7 +237,7 @@
 .cart-items{
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  
 }
 .cart-items>img {
   border-radius: 20px;
