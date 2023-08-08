@@ -313,6 +313,39 @@
   background-color: red;
   transform: scale(1.1);
 }
+.cartGross {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+}
+
+.cartGross p {
+  font-weight: bold;
+}
+
+.cartgrossBox {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.checkoutbTn {
+  flex-shrink: 0;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 20px;
+}
+
+
+
+
+
+
+
 @media screen and (max-width: 1537px) {
   .popupStyle  {
     overflow: scroll;
