@@ -66,6 +66,7 @@ function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
   }
   const list = (anchor) => (
     <>
+    <div className="drawer-box">
       <div className='drawer'>
         <p>Cart {cartitems.length}</p>
         <button onClick={toggleDrawer(anchor, false)}>
@@ -75,7 +76,7 @@ function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
       {cartitems.length > 0 ? (
         <>
           {cartitems.map((item) => (
-            <div className="cart-box" key={item.product}>
+            <div className="cart-box" key={item.product} style={({'flex': '1'})}>
               <div className="cart-items">
                 <img src={item.image} alt='saa/' />
                 <div className="carTInput">
@@ -106,6 +107,7 @@ function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
           <p>Your cart is empty.</p>
         </div>
       )}
+      </div>
     </>
   );
   

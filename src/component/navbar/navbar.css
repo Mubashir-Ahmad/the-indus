@@ -313,6 +313,11 @@
   background-color: red;
   transform: scale(1.1);
 }
+.drawer-box{
+  display: flex;
+  flex-direction: column;
+  
+}
 @media screen and (max-width: 1537px) {
   .popupStyle  {
     overflow: scroll;
