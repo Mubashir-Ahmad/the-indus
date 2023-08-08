@@ -11,7 +11,7 @@ function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
 
   const { isAuthenticated } = useSelector((state) => state.user);
   const { cartitems } = useSelector((state) => state.cart);
-  console.log('NavBar',useSelector((state) => state.cart))
+  console.log('NavBar',isDrawerOpen,'navbars',setIsDrawerOpen )
   const [isActive, setIsActive] = useState(false);
   const [state, setState] = useState({
     right: false ,
