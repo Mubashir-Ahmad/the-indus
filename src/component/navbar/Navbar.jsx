@@ -76,7 +76,7 @@ function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
       {cartitems.length > 0 ? (
         <>
           {cartitems.map((item) => (
-            <div className="cart-box" key={item.product} style={({'flex': '1'})}>
+            <div className="cart-box" key={item.product}>
               <div className="cart-items">
                 <img src={item.image} alt='saa/' />
                 <div className="carTInput">
