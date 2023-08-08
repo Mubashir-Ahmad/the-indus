@@ -75,9 +75,9 @@ function Login({ location}) {
       navigate('/admindashbord');
     } else if (user.user.role === 'manager') {
       navigate('/managerdashbord');
-    } else if (user.role === 'user') {
+    } else if (user.user.role === 'user') {
       navigate('/');
-    } else if (user.role === 'rider') {
+    } else if (user.user.role === 'rider') {
       navigate('/riderdash');
     } 
   }
