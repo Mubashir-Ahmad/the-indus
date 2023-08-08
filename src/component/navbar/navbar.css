@@ -227,6 +227,16 @@
   /* width: 400px; */
   padding-top: 5%;
 }
+.drawer >p {
+  font:400 1.2vmax "Roboto" ;
+}
+.drawer > button {
+  background: transparent;
+  border: none;
+  position: relative;
+  bottom: 15px;
+  font-size: 1.3vmax;
+}
 .cart-box{
   width: 100%;
   display: flex;

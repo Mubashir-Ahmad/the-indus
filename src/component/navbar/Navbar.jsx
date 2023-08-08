@@ -68,7 +68,7 @@ function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
     <>
     <div className="drawer-box">
       <div className='drawer'>
-        <p>Cart {cartitems.length}</p>
+        <p>Your Cart: {cartitems.length}</p>
         <button onClick={toggleDrawer(anchor, false)}>
           <i className="fa-solid fa-xmark"></i>
         </button>
