@@ -291,12 +291,12 @@
   text-align: center;
   width: 32px;
 }
-.drawer-link > Link{
+.drawer-link {
   background-color: #ce1710;
   color: #fff;
   transition: all 0.3s ease-in-out;
 }
-.drawer-link >Link:hover{
+.drawer-link:hover{
   transform: scaleY(1.1vmax);
   background-color: red;
 }
