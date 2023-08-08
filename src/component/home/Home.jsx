@@ -14,11 +14,6 @@ function Home( setIsDrawerOpen ) {
         setShowInfo(!showInfo); // Toggle the state value
     };
 
-    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-
-    const handleAddToCart = () => {
-      setIsDrawerOpen(true);
-    };
     const dispatch = useDispatch();
     const { loading, error, products, productCount } = useSelector(
         (state) => state.productts
