@@ -250,25 +250,32 @@
   padding: 10px;
   width: 50%;
 }
-.carTInput> .drawerinput >button {
-  background-color: rgba(0,0,0,.616);
+.carTInput > a  {
+  color: black;
+  text-decoration: none;
+  font: 400 1.1vmax "Roboto";
+}
+.carTInput>.drawerinput>button {
+  background-color: transparent;
   border: none;
-  color: #fff;
+  color: #7d7d7d;
   cursor: pointer;
-  padding: 7px;
-  transition: all .5s ease-in-out;
   margin: 0.3vmax;
+  padding: 0px 16px;
+  transition: all .5s ease-in-out;
+  height: 39px;
+  font-size: 1.6vmax;
 }
 .carTInput > .drawerinput >button:hover{
   background-color: rgba(0, 0, 0, 0.767);
 }
-.carTInput> .drawerinput > input {
+.carTInput>.drawerinput>input {
   border: none;
+  color: #7d7d7d;
+  font: 300 1.1vmax Roboto;
   padding: 0.5vmax;
-  width: 32px;
   text-align: center;
-  font: 300 1.3vmax "Roboto";
-  color: black;
+  width: 32px;
 }
 .MuiPaper-root{
   width: 25% !important;
