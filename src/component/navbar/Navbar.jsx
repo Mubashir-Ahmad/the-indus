@@ -66,45 +66,49 @@ function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
   }
   const list = (anchor) => (
     <>
-    <div className='drawer'>
-    <p>Cart{cartitems.length}</p>
-    <button onClick={toggleDrawer(anchor, false)}>
-    <i class="fa-solid fa-xmark" ></i>
-    </button>
-    </div>
-    {
-      cartitems && cartitems.map((item) => (
-        <>
-      <div className="cart-box" key={item.product}>
-           <div className="cart-items">
-            <img src={item.image} alt='saa/'/>
-            <div className="carTInput">
-            <Link to={`/product/${item.product}`}>{item.name}</Link>
-            <button onClick={() => decresequality(item.product, item.quantity, item.stock)}> - </button>
-              <input readOnly  value={item.quantity} />
-              <button onClick={() => incresequality(item.product, item.quantity, item.stock)}> + </button>
-            </div>
-            <p onClick={()=>decresecartitem(item.product)}>Remove</p>
-        </div> 
+      <div className='drawer'>
+        <p>Cart {cartitems.length}</p>
+        <button onClick={toggleDrawer(anchor, false)}>
+          <i className="fa-solid fa-xmark"></i>
+        </button>
       </div>
-    
-            <div className="cartGross">
-          <div></div>
-          <div className="cartgrossBox">
-            <p>{`Total Amount: ${cartitems.reduce(
-              (acc,item)=> acc + item.quantity * item.price , 0
-            )}`}</p>
+      {cartitems.length > 0 ? (
+        <>
+          {cartitems.map((item) => (
+            <div className="cart-box" key={item.product}>
+              <div className="cart-items">
+                <img src={item.image} alt='saa/' />
+                <div className="carTInput">
+                  <Link to={`/product/${item.product}`}>{item.name}</Link>
+                  <button onClick={() => decresequality(item.product, item.quantity, item.stock)}> - </button>
+                  <input readOnly value={item.quantity} />
+                  <button onClick={() => incresequality(item.product, item.quantity, item.stock)}> + </button>
+                </div>
+                <p onClick={() => decresecartitem(item.product)}>Remove</p>
+              </div>
+            </div>
+          ))}
+          <div className="cartGross">
+            <div></div>
+            <div className="cartgrossBox">
+              <p>{`Total Amount: ${cartitems.reduce(
+                (acc, item) => acc + item.quantity * item.price, 0
+              )} PKR`}</p>
+            </div>
+            <div></div>
+            <div className="checkoutbTn">
+              <button onClick={checkouthandler}>Check out</button>
+            </div>
           </div>
-          <div></div>
-          <div className="checkoutbTn">
-            <button onClick={checkouthandler}>Check out</button>
-          </div>
+        </>
+      ) : (
+        <div className="empty-cart">
+          <p>Your cart is empty.</p>
         </div>
-      </>
-    ))
-  }
-</>
+      )}
+    </>
   );
+  
 
   return (
     <>
