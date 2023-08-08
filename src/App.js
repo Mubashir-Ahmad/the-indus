@@ -59,6 +59,7 @@ import MyOrders from './component/user/Myorders';
 import NewUser from './component/Manager/Newuser';
 function App() {
   const dispatch = useDispatch();
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const { isAuthenticated, user } = useSelector((state) => state.user);
   console.log('appp' ,useSelector((state) => state.user))
   const [stripeapikey,setstripeapikey]= useState(" ");
@@ -100,11 +101,11 @@ function App() {
     <div className="App">
       { console.log('useeefeect1212',isAuthenticated)}
             <Router>
-              <Navbar/>
+            <Navbar isDrawerOpen={isDrawerOpen} setIsDrawerOpen={setIsDrawerOpen} />
               {isAuthenticated && <Useroption user={user} />}
               <Routes>
               {/* <Route path="*" element={<Login />} exact />   */}
-              <Route path="/" element={<Home />} exact />
+              <Route path="/" element={<Home  setIsDrawerOpen={setIsDrawerOpen}/>} exact />
               <Route path="/login" element={<Login />} exact />
               <Route path="/password/forget" element={<Forgetpassword />} exact />
               <Route path='/password/reset/:token' element={<Resetpassword/>} />

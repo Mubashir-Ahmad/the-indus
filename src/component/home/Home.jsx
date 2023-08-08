@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import Product from '../product/Product';
 import {load_user} from '../../actions/UserAction'
 import Navbar from '../navbar/Navbar';
-function Home() {
+function Home( setIsDrawerOpen ) {
     const [showInfo, setShowInfo] = useState(false);
     const { isAuthenticated, user } = useSelector((state) => state.user);
     const handleClick = () => {
@@ -32,6 +32,10 @@ function Home() {
         dispatch(load_user());
         dispatch(getproducts());
     }, [dispatch, error])
+    const addToCartPressed = () => {
+        
+        setIsDrawerOpen(true); // Open the drawer when the "Add to Cart" button is pressed
+      };
     return (
         <>
             <div className="container-fluid">
@@ -45,8 +49,7 @@ function Home() {
             <div className="containeer" id='containeer'>
                 {products && products.map((item=>
                 <>
-                <Navbar isDrawerOpen={isDrawerOpen} />
-                    <Product product= {item} onAddToCart={handleAddToCart} />
+                    <Product product= {item} addToCartPressed={addToCartPressed} />
                     </>
                     ))}
                     

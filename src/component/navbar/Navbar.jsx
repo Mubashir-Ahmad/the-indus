@@ -7,14 +7,14 @@ import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import {useSelector , useDispatch} from 'react-redux'
 import { addItem_tocart , removeitemfromcart } from '../../actions/CartAction';
-function Navbar({ isDrawerOpen } ) {
+function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
 
   const { isAuthenticated } = useSelector((state) => state.user);
   const { cartitems } = useSelector((state) => state.cart);
   console.log('NavBar',useSelector((state) => state.cart))
   const [isActive, setIsActive] = useState(false);
   const [state, setState] = useState({
-    right: isDrawerOpen ,
+    right: false ,
   });
   const [keywords, setKeywords] = useState('');
 
@@ -59,6 +59,7 @@ function Navbar({ isDrawerOpen } ) {
     }
   
     setState({ ...state, [anchor]: open });
+    setIsDrawerOpen(open);
   };
   const checkouthandler =()=>{
     navigate('/shipping')
@@ -153,7 +154,7 @@ function Navbar({ isDrawerOpen } ) {
       </div>
       <Drawer
         anchor="right"
-        open={state.right}
+        open={isDrawerOpen}
         onClose={toggleDrawer('right', false)}
       >
         {list('right')}
