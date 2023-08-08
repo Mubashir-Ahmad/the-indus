@@ -282,8 +282,8 @@
   color: rgba(0, 0, 0, 0.753);
 }
 .cartGross{
-  /* display: grid;
-  grid-template-columns: 2fr 1.2fr; */
+  position: absolute;
+  bottom: 60px;
 }
 
 .cartgrossBox{
@@ -318,6 +318,7 @@
   flex-direction: column;
   
 }
+
 @media screen and (max-width: 1537px) {
   .popupStyle  {
     overflow: scroll;
