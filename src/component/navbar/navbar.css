@@ -479,11 +479,11 @@
     width: 45% !important;
   }
 }
-/* @media screen and (max-width:750px) {
+@media screen and (max-width:650px) {
   .MuiPaper-root{
-    width: 45% !important;
+    width: 68% !important;
   }
-} */
+}
 @media screen and (max-width:950px) {
   .cartGross {
     bottom: 60px;
