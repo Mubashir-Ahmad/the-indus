@@ -312,9 +312,10 @@
   justify-content: center;
   color: rgba(0, 0, 0, 0.753);
 }
-.cartGross{
-  position: absolute;
+.cartGross {
   bottom: 60px;
+  position: absolute;
+  width: 100%;
 }
 
 .cartgrossBox{
@@ -413,7 +414,7 @@
   .carTInput > a  {
     color: black;
     text-decoration: none;
-    font: 400 1.1vmax "Roboto";
+    font: 400 1.7vmax "Roboto";
   }
   .MuiPaper-root{
     width: 31% !important;
@@ -422,6 +423,14 @@
     border-radius: 20px;
     height: 60%;
     width: 30%;
+}
+.carTInput>.drawerinput>input {
+  border: none;
+  color: #7d7d7d;
+  font: 300 2vmax Roboto;
+  padding: 0.5vmax;
+  text-align: center;
+  width: 32px;
 }
 .carTInput>.drawerinput>button {
   background-color: initial;
@@ -494,6 +503,14 @@ height: 39px;
 margin: 0.3vmax;
 padding: 0 16px;
 transition: all .5s ease-in-out;
+}
+.carTInput>.drawerinput>input {
+  border: none;
+  color: #7d7d7d;
+  font: 300 2vmax "Roboto";
+  padding: 0.5vmax;
+  text-align: center;
+  width: 32px;
 }
   .pppp  {
     position: fixed;
