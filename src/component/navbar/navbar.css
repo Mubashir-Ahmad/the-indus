@@ -481,7 +481,7 @@
 }
 @media screen and (max-width:650px) {
   .MuiPaper-root{
-    width: 68% !important;
+    width: 60% !important;
   }
 }
 @media screen and (max-width:950px) {
