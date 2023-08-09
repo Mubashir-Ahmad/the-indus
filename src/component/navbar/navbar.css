@@ -493,6 +493,24 @@
   height: 60%;
   width: 30%;
 }
+.checkoutbTn>button {
+  background-color: #ce1710;
+  border: none;
+  border-radius: 13px;
+  color: #fff;
+  cursor: pointer;
+  font: 300 2.4vmax Roboto;
+  height: 55%;
+  margin: 1vmax 7vmax;
+  padding: 0.8vmax 2vmax;
+  transition: all .3s ease-in-out;
+  width: 80%;
+}
+.cartgrossBox  > p {
+  font: 300 2.5vmax Roboto;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
 .carTInput>.drawerinput>button {
 background-color: initial;
 border: none;
