@@ -483,7 +483,7 @@
 .carTInput > a  {
   color: black;
   text-decoration: none;
-  font: 400 1.1vmax "Roboto";
+  font: 400 1.7vmax "Roboto";
 }
 .MuiPaper-root{
   width: 40% !important;
@@ -507,7 +507,7 @@
   width: 80%;
 }
 .cartgrossBox  > p {
-  font: 300 2.5vmax Roboto;
+  font: 300 2.5vmax "Roboto";
   margin-bottom: 1rem;
   margin-top: 0;
 }
