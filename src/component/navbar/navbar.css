@@ -261,7 +261,7 @@
   display: flex;
   height: 5vmax;
   padding: 10px;
-  width: 50%;
+  width: 70%;
   flex-direction: column;
 }
 .carTInput > a  {
@@ -295,6 +295,7 @@
   background-color: #ce1710;
   color: #fff;
   transition: all 0.3s ease-in-out;
+  padding: 7px;
 }
 .drawer-link:hover{
   transform: scaleY(1.1vmax);
@@ -353,6 +354,14 @@
   .popupStyle  {
     overflow: scroll;
     };
+    .carTInput {
+      align-items: center;
+      display: flex;
+      height: 5vmax;
+      padding: 10px;
+      width: 90%;
+      flex-direction: column;
+    }
     .searchbar {
         width: 40%;
         display: flex;
@@ -392,6 +401,30 @@
       
 }
 @media screen and (max-width:1170px) {
+  .carTInput > a  {
+    color: black;
+    text-decoration: none;
+    font: 400 1.1vmax "Roboto";
+  }
+  .MuiPaper-root{
+    width: 31% !important;
+  }
+  .cart-items>img {
+    border-radius: 20px;
+    height: 60%;
+    width: 30%;
+}
+.carTInput>.drawerinput>button {
+  background-color: initial;
+  border: none;
+  color: #7d7d7d;
+  cursor: pointer;
+  font-size: 2.7vmax;
+  height: 39px;
+  margin: 0.3vmax;
+  padding: 0 16px;
+  transition: all .5s ease-in-out;
+}
     .logo > img {
         width: 85%;
       }
