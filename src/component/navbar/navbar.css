@@ -474,6 +474,16 @@
         right: 2vmax;
       }
 }
+@media screen and (max-width:880px) {
+  .MuiPaper-root{
+    width: 45% !important;
+  }
+}
+/* @media screen and (max-width:750px) {
+  .MuiPaper-root{
+    width: 45% !important;
+  }
+} */
 @media screen and (max-width:950px) {
   .cartGross {
     bottom: 60px;
@@ -486,7 +496,7 @@
   font: 400 1.7vmax "Roboto";
 }
 .MuiPaper-root{
-  width: 35% !important;
+  width: 45% !important;
 }
 .cart-items>img {
   border-radius: 20px;
