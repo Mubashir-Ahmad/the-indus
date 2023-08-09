@@ -474,16 +474,7 @@
         right: 2vmax;
       }
 }
-@media screen and (max-width:880px) {
-  .MuiPaper-root{
-    width: 45% !important;
-  }
-}
-@media screen and (max-width:650px) {
-  .MuiPaper-root{
-    width: 60% !important;
-  }
-}
+
 @media screen and (max-width:950px) {
   .cartGross {
     bottom: 60px;
@@ -649,4 +640,10 @@ transition: all .5s ease-in-out;
         top: 4vmax;
         right: 0vmax;
       }
+}
+
+@media screen and (max-width:650px) {
+  .MuiPaper-root{
+    width: 60% !important;
+  }
 }
