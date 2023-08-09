@@ -647,8 +647,8 @@ transition: all .5s ease-in-out;
   }
 }
 
-@media screen and (max-width:450px) {
+@media screen and (max-width:470px) {
   .MuiPaper-root{
-    width: 100% !important;
+    width: 90% !important;
   }
 }
