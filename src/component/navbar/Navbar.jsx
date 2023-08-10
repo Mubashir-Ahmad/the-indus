@@ -43,10 +43,9 @@ function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     if (keywords.trim()) {
-
       navigate(`/products/${keywords}`);
     } else {
-      navigate("/")
+      navigate("/");
     }
   };
   const decresecartitem = (id) => {
