@@ -21,7 +21,7 @@ function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
   const togglePopup = () => {
     setIsActive(!isActive);
   };
-  const dispatch = useDispatch();
+  con
   const navigate = useNavigate();
   // console.log('id',cartitems)
   const incresequality = (id, quantity, stock) => {
@@ -44,9 +44,10 @@ function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     if (keywords.trim()) {
-      // Handle the search logic here or navigate to the search results page
+
+      navigate(`/products/${keywords}`);
     } else {
-      // Handle the case when no keywords are entered
+      navigate("/")
     }
   };
   const decresecartitem = (id) => {
@@ -61,7 +62,7 @@ function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
     setState({ ...state, [anchor]: open });
     setIsDrawerOpen(open);
   };
-  const checkouthandler =()=>{
+
     navigate('/shipping')
   }
   const list = (anchor) => (
@@ -171,6 +172,7 @@ function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
       </Drawer>
     </>
   );
-}
+
+
 
 export default Navbar;
