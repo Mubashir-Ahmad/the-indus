@@ -41,7 +41,6 @@ function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
     dispatch(addItem_tocart(id, newQty))
   }
   const handleSearchSubmit = (e) => {
-    e.preventDefault();
     if (keywords.trim()) {
 
       navigate(`/products/${keywords}`);
