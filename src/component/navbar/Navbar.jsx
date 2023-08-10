@@ -30,7 +30,6 @@ function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
     if(stock <= quantity) {
       return;
     }
-    console.log('idd',id)
     dispatch(addItem_tocart(id, newQty))
   }
 
