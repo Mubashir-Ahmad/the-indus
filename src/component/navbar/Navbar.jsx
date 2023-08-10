@@ -64,7 +64,7 @@ function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
   };
 
     navigate('/shipping')
-  }
+  
   const list = (anchor) => (
     <>
     <div className="drawer-box">
@@ -134,7 +134,7 @@ function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
                 onChange={(e) => setKeywords(e.target.value)}
               />
             </div>
-            <button onClick={handleSearchSubmit} className='linkk'>
+            <button onClick={handleSearchSubmit()} className='linkk'>
               <i className='fa-solid fa-magnifying-glass' style={{ color: 'white' }}></i>
             </button>
           </div>
@@ -174,5 +174,5 @@ function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
   );
 
 
-
+            }
 export default Navbar;
