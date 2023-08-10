@@ -49,7 +49,7 @@ function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
     }
   };
   const decresecartitem = (id) => {
-    console.log(id)
+    
     dispatch(removeitemfromcart(id));
   }
   const toggleDrawer = (anchor, open) => (event) => {
