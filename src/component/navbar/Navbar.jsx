@@ -9,6 +9,7 @@ import {useSelector , useDispatch} from 'react-redux'
 import { addItem_tocart , removeitemfromcart } from '../../actions/CartAction';
 function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
 
+  const dispatch =useDispatch();
   const { isAuthenticated } = useSelector((state) => state.user);
   const { cartitems } = useSelector((state) => state.cart);
   console.log('NavBar',isDrawerOpen,'navbars',setIsDrawerOpen )
@@ -21,7 +22,6 @@ function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
   const togglePopup = () => {
     setIsActive(!isActive);
   };
-  con
   const navigate = useNavigate();
   // console.log('id',cartitems)
   const incresequality = (id, quantity, stock) => {
@@ -61,8 +61,9 @@ function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
     setState({ ...state, [anchor]: open });
     setIsDrawerOpen(open);
   };
-
+  const checkouthandler =()=>{
     navigate('/shipping')
+  }
   
   const list = (anchor) => (
     <>
