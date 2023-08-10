@@ -134,9 +134,9 @@ function Navbar({  isDrawerOpen, setIsDrawerOpen } ) {
                 onChange={(e) => setKeywords(e.target.value)}
               />
             </div>
-            <Link onClick={handleSearchSubmit} className='linkk'>
+            <button onClick={handleSearchSubmit} className='linkk'>
               <i className='fa-solid fa-magnifying-glass' style={{ color: 'white' }}></i>
-            </Link>
+            </button>
           </div>
           <div className='buttonn'>
             <div className='buttoon'>
